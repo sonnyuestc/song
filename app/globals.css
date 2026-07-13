@@ -117,10 +117,59 @@ button, input { font: inherit; }
 footer { min-height: 180px; padding: 40px 5vw; display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 4vw; background: #10241f; color: white; font-size: 11px; }
 footer p { color: #98aaa5; } footer > div { display: flex; gap: 25px; } footer > span { color: #81928e; }
 
+/* Long-form knowledge articles */
+.article-page { background: #f7fafb; min-height: 100vh; }
+.article-nav { height: 82px; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); background: rgba(247,250,251,.94); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(12px); }
+.article-nav > a:last-child { font-size: 12px; font-weight: 800; }
+.article-hero { padding: 100px max(7vw, calc((100vw - 1280px) / 2)) 82px; background: var(--ink); color: white; position: relative; overflow: hidden; }
+.article-hero::after { content: ""; position: absolute; width: 470px; height: 470px; right: -100px; top: -180px; border: 1px solid rgba(0,194,232,.45); border-radius: 50%; box-shadow: 0 0 0 70px rgba(0,194,232,.04), 0 0 0 150px rgba(0,194,232,.03); }
+.article-kicker { margin: 0 0 28px; color: var(--acid); font-size: 11px; font-weight: 900; letter-spacing: .18em; }
+.article-hero h1 { max-width: 1050px; margin: 0; font-size: clamp(48px, 6vw, 90px); line-height: 1.04; letter-spacing: -.06em; position: relative; z-index: 1; }
+.article-deck { max-width: 760px; margin: 32px 0 0; color: #bed0d5; font-size: 18px; line-height: 1.85; position: relative; z-index: 1; }
+.article-meta { margin-top: 42px; display: flex; gap: 12px; flex-wrap: wrap; }
+.article-meta span { padding: 8px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 99px; font-size: 10px; font-weight: 800; color: #d7e4e7; }
+.article-layout { max-width: 1240px; margin: 0 auto; padding: 90px 34px 120px; display: grid; grid-template-columns: 220px minmax(0, 760px); justify-content: center; gap: 85px; }
+.article-aside { align-self: start; position: sticky; top: 120px; padding: 19px 0; border-top: 2px solid var(--acid); border-bottom: 1px solid var(--line); }
+.article-aside p { margin: 0 0 10px; font-size: 11px; font-weight: 900; letter-spacing: .12em; }
+.article-aside span { color: #667d83; font-size: 11px; line-height: 1.75; }
+.article-body { color: #213d47; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+.article-body > p { margin: 0 0 25px; font-size: 16px; line-height: 2; }
+.article-body .article-lead { margin-bottom: 56px; font-size: 21px; line-height: 1.95; color: var(--ink); font-weight: 600; }
+.article-body h2 { margin: 74px 0 24px; padding-top: 10px; font-size: 34px; line-height: 1.3; letter-spacing: -.04em; color: var(--ink); }
+.article-body h2::before { content: ""; display: block; width: 36px; height: 4px; margin-bottom: 17px; background: var(--acid); }
+.formula { margin: 32px 0; padding: 29px; background: var(--ink); color: white; border-left: 5px solid var(--acid); font: 700 clamp(18px, 2.5vw, 27px)/1.5 Georgia, serif; text-align: center; letter-spacing: .01em; }
+.article-body table { width: 100%; margin: 30px 0 36px; border-collapse: collapse; font-size: 13px; }
+.article-body th { padding: 14px 16px; background: var(--ink); color: white; text-align: left; }
+.article-body td { padding: 14px 16px; border: 1px solid var(--line); background: white; line-height: 1.6; }
+.article-product { margin: 48px 0; padding: 30px; background: white; border: 1px solid var(--line); }
+.article-product img { display: block; width: 100%; max-height: 480px; object-fit: contain; }
+.article-product figcaption { margin-top: 18px; color: #6f8389; font-size: 11px; text-align: center; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 32px 0; background: var(--line); border: 1px solid var(--line); }
+.comparison-grid section { padding: 28px; background: white; }
+.comparison-grid span { color: #008eac; font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+.comparison-grid h3 { margin: 10px 0 13px; font-size: 21px; color: var(--ink); }
+.comparison-grid p { margin: 0; color: #61777e; font-size: 13px; line-height: 1.8; }
+.article-body ol { margin: 27px 0 40px; padding: 0; list-style: none; counter-reset: steps; }
+.article-body ol li { counter-increment: steps; position: relative; margin-bottom: 12px; padding: 18px 20px 18px 64px; background: white; border: 1px solid var(--line); font-size: 14px; line-height: 1.75; }
+.article-body ol li::before { content: counter(steps, decimal-leading-zero); position: absolute; left: 18px; top: 18px; color: #009fbe; font-weight: 900; }
+.numbered-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 30px 0; }
+.numbered-points section { padding: 24px; background: white; border-top: 3px solid var(--acid); }
+.numbered-points b { color: #009fbe; font-size: 11px; }.numbered-points h3 { margin: 15px 0 8px; font-size: 20px; }.numbered-points p { margin: 0; color: #667b81; font-size: 12px; line-height: 1.8; }
+.mesh-diagram { margin: 35px 0; padding: 35px 24px; display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 12px; background: #dff7fb; border: 1px solid #b1e6ef; text-align: center; font-size: 12px; font-weight: 800; }
+.mesh-diagram > div { padding: 13px 8px; background: white; border: 1px solid #8ccfdb; border-radius: 4px; }.mesh-diagram span, .mesh-diagram i { color: #008ca9; font-size: 21px; font-style: normal; }.mesh-diagram .mesh-lower { margin-top: 45px; }
+.takeaway { margin-top: 65px; padding: 30px 32px; background: var(--acid); color: var(--ink); }
+.takeaway b { display: block; margin-bottom: 10px; font-size: 11px; letter-spacing: .14em; }.takeaway p { margin: 0; font-size: 16px; line-height: 1.85; font-weight: 700; }
+.article-cta { padding: 70px 8vw; background: var(--orange); color: var(--ink); display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.article-cta p { margin: 0 0 11px; font-size: 10px; font-weight: 900; letter-spacing: .17em; }.article-cta h2 { margin: 0; font-size: clamp(30px, 4vw, 55px); letter-spacing: -.05em; }
+.article-cta a { padding: 16px 20px; background: var(--ink); color: white; font-size: 12px; font-weight: 800; white-space: nowrap; }.article-cta a span { margin-left: 25px; color: var(--acid); }
+.article-footer-nav { min-height: 90px; padding: 0 5vw; display: flex; justify-content: space-between; align-items: center; background: #051a25; color: #95a8ae; }
+.article-footer-nav a { color: white; }
+
 @media (max-width: 1050px) {
   .hero { grid-template-columns: 1fr; }.hero-visual { min-height: 580px; border-left: 0; border-top: 1px solid var(--line); }
   .hero-copy { min-height: 650px; }.product-grid { grid-template-columns: repeat(2, 1fr); }
   .knowledge-section { grid-template-columns: 1fr; }.knowledge-intro { position: static; }
+  .article-layout { grid-template-columns: 1fr; gap: 25px; }.article-aside { position: static; max-width: 760px; }.article-body { max-width: 760px; }
 }
 
 @media (max-width: 700px) {
@@ -133,6 +182,7 @@ footer p { color: #98aaa5; } footer > div { display: flex; gap: 25px; } footer >
   .about-section { padding: 85px 22px; grid-template-columns: 1fr; }.about-quote { font-size: 130px; height: 60px; }.about-stamp { justify-self: start; margin-top: 15px; }
   .newsletter { padding: 65px 22px; grid-template-columns: 1fr; }.newsletter form { flex-direction: column; gap: 14px; border: 0; }.newsletter input { padding: 14px 0; border-bottom: 2px solid var(--ink); }
   footer { padding: 45px 22px; grid-template-columns: 1fr; gap: 20px; } footer > div { flex-wrap: wrap; }
+  .article-nav { height: 70px; padding: 0 20px; }.article-hero { padding: 70px 22px 60px; }.article-hero h1 { font-size: 48px; }.article-deck { font-size: 15px; }.article-layout { padding: 55px 20px 80px; }.article-body .article-lead { font-size: 18px; }.article-body h2 { margin-top: 58px; font-size: 28px; }.comparison-grid, .numbered-points { grid-template-columns: 1fr; }.mesh-diagram { grid-template-columns: 1fr; }.mesh-diagram .mesh-lower { margin-top: 0; }.article-cta { padding: 55px 22px; align-items: flex-start; flex-direction: column; }.article-footer-nav { padding: 25px 22px; gap: 15px; flex-direction: column; align-items: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }

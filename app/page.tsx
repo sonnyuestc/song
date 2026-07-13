@@ -100,6 +100,7 @@ const articles = [
     title: "2 ms、35 ms 与一帧画面：图传延迟到底从哪里来？",
     excerpt: "从无线往返延迟、相机处理到编码与显示，拆解实时视频链路中的每一段时间。",
     read: "7 分钟阅读",
+    href: "/articles/latency",
   },
   {
     tag: "网络原理",
@@ -107,6 +108,7 @@ const articles = [
     title: "Mesh 自组网为什么适合无人系统与应急现场？",
     excerpt: "没有固定主从、节点自动入网、多跳扩大覆盖：用任务场景看懂 Mesh 的价值与边界。",
     read: "8 分钟阅读",
+    href: "/articles/mesh-networking",
   },
   {
     tag: "射频基础",
@@ -114,6 +116,7 @@ const articles = [
     title: "发射功率不等于传输距离：链路预算的四个关键变量",
     excerpt: "频率、天线增益、接收灵敏度与环境共同决定覆盖，功率只是其中一环。",
     read: "6 分钟阅读",
+    href: "/articles/link-budget",
   },
 ];
 
@@ -232,7 +235,7 @@ export default function Home() {
         </div>
         <div className="article-list">
           {articles.map((article, index) => (
-            <a className="article-card" href="#contact" key={article.title}>
+            <a className="article-card" href={article.href} key={article.title}>
               <span className="article-no">0{index + 1}</span>
               <div>
                 <p><b>{article.tag}</b><span>{article.date}</span></p>
