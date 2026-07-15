@@ -4,6 +4,33 @@ import { useMemo, useState } from "react";
 
 const categories = ["全部产品", "数字图传", "模拟图传", "网络通信", "热成像"];
 
+const productShowcases = [
+  {
+    title: "ZYRO Digital HD",
+    subtitle: "数字高清系统，稳定低延迟",
+    image: "/showcase/digital-hd-v1.png",
+    href: "/downloads/zyro-air.pdf",
+  },
+  {
+    title: "ZYRO Link & Mesh",
+    subtitle: "数据链路与自组网，连接复杂现场",
+    image: "/showcase/network-v1.png",
+    href: "/downloads/zyro-mesh.pdf",
+  },
+  {
+    title: "ZYRO Analog FPV",
+    subtitle: "直接反馈，高功率宽频覆盖",
+    image: "/showcase/analog-fpv-v1.png",
+    href: "/downloads/zyro-air-analog.pdf",
+  },
+  {
+    title: "ZYRO Thermal",
+    subtitle: "轻量红外感知，全天候视觉",
+    image: "/showcase/thermal-v1.png",
+    href: "/downloads/zyro-thermal.pdf",
+  },
+];
+
 const products = [
   {
     name: "ZYRO Air",
@@ -95,8 +122,16 @@ const products = [
 
 const articles = [
   {
-    tag: "链路科普",
+    tag: "热成像基础",
     date: "本周更新",
+    title: "没有可见光，热成像为什么仍能看见？",
+    excerpt: "从 8–14 μm 热辐射到 NETD、红外分辨率和镜头视场，读懂热成像选型中的四个关键概念。",
+    read: "8 分钟阅读",
+    href: "/articles/thermal-imaging",
+  },
+  {
+    tag: "链路科普",
+    date: "07.13",
     title: "2 ms、35 ms 与一帧画面：图传延迟到底从哪里来？",
     excerpt: "从无线往返延迟、相机处理到编码与显示，拆解实时视频链路中的每一段时间。",
     read: "7 分钟阅读",
@@ -151,49 +186,58 @@ export default function Home() {
           <span />
         </button>
         <nav className={menuOpen ? "nav-links nav-open" : "nav-links"} aria-label="主导航">
+          <a href="#featured" onClick={() => setMenuOpen(false)}>新品</a>
           <a href="#products" onClick={() => setMenuOpen(false)}>产品</a>
+          <a href="#solutions" onClick={() => setMenuOpen(false)}>应用解决方案</a>
           <a href="#knowledge" onClick={() => setMenuOpen(false)}>知识库</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>关于我们</a>
-          <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>联系我们</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>进入 ZYRO</a>
+          <a className="nav-cta" href="/downloads/zyro-portfolio.pdf" target="_blank" onClick={() => setMenuOpen(false)}>产品总览</a>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Wireless imaging & data link</p>
-          <h1>超越距离，<br />保持<span>实时。</span></h1>
-          <p className="hero-lead">
-            面向无人机、机器人与复杂现场的无线图像和数据链路产品。从数字图传到 Mesh 自组网，让任务画面与控制数据稳定抵达。
-          </p>
+          <p className="eyebrow">超远范围数字高清图传系统</p>
+          <h1>ZYRO AIR</h1>
+          <h2>轻装上阵，稳定抵达</h2>
+          <p className="hero-lead">4K30 · 1080P90 · H.265<br />为无人机与移动平台打造的一体化数字图传。</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#products">浏览全部产品 <b>↗</b></a>
-            <a className="text-link" href="#knowledge">阅读最新科普 <span>→</span></a>
-          </div>
-          <div className="hero-proof">
-            <div><strong>3-8.2</strong><span>GHz 产品覆盖</span></div>
-            <div><strong>2 ms</strong><span>典型链路延迟</span></div>
-            <div><strong>16 km</strong><span>典型空地链路</span></div>
+            <a className="button button-primary" href="/downloads/zyro-air.pdf" target="_blank">了解详情 <b>→</b></a>
           </div>
         </div>
         <div className="hero-visual" aria-label="ZYRO Air 数字图传产品展示">
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="hero-product-photo"><img src="/products/air.jpg" alt="ZYRO Air 一体化空中数字图传" /></div>
-          <div className="float-card float-card-one"><span>4K</span><p>最高支持<br /><b>3840×2160 30fps</b></p></div>
-          <div className="float-card float-card-two"><span>30g</span><p>相机 · 编码<br /><b>无线传输一体化</b></p></div>
-          <p className="visual-note">Beyond distance, in real time</p>
+          <img src="/showcase/hero-air-v1.png" alt="ZYRO Air 一体化空中数字图传" />
         </div>
+        <div className="hero-pagination"><span>01</span><i /><span>03</span></div>
       </section>
 
-      <section className="ticker" aria-label="网站特色">
-        <span>数字图传</span><i>✦</i><span>模拟 FPV</span><i>✦</i><span>Mesh 自组网</span><i>✦</i><span>热成像模组</span><i>✦</i><span>每周技术新知</span>
+      <section className="ticker" aria-label="产品系列导航">
+        <a href="#products">数字高清系统</a><a href="#products">模拟 FPV</a><a href="#products">Mesh 自组网</a><a href="#products">热成像模组</a><a href="#knowledge">技术知识中心</a>
+      </section>
+
+      <section className="featured-product" id="featured">
+        <div className="featured-media"><img src="/showcase/featured-c403-v1.png" alt="ZYRO C403 Max 数字图传套装" /></div>
+        <div className="featured-copy"><p>NEW / DIGITAL HD SYSTEM</p><h2>ZYRO<br />C403 MAX</h2><h3>1080P60 高清图传 · 3–7 GHz 多频段</h3><a href="/downloads/zyro-c403-max.pdf" target="_blank">了解详情 <span>→</span></a></div>
       </section>
 
       <section className="section products-section" id="products">
         <div className="section-heading">
-          <div><p className="section-index">01 / PRODUCTS</p><h2>完整无线视觉产品矩阵</h2></div>
-          <p>覆盖空中端、嵌入式链路、地面接收、Mesh 网络、模拟视频与红外感知。</p>
+          <div><p className="section-index">PRODUCT ECOSYSTEM</p><h2>多元无线视觉新装备</h2></div>
+          <p>从高清图传到自组网和热成像，探索更多无人系统连接方式。</p>
         </div>
+        <div className="showcase-grid">
+          {productShowcases.map((showcase) => (
+            <a className="showcase-card" href={showcase.href} target="_blank" rel="noreferrer" key={showcase.title}>
+              <img src={showcase.image} alt={`${showcase.title} 产品系列场景展示`} />
+              <div className="showcase-copy">
+                <h3>{showcase.title}</h3>
+                <p>{showcase.subtitle}</p>
+                <span>了解详情　›</span>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div className="all-products-heading" id="all-products"><span>ALL PRODUCTS</span><h3>全部产品</h3></div>
         <div className="filters" role="group" aria-label="产品分类筛选">
           {categories.map((category) => (
             <button
@@ -226,10 +270,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="solutions-section" id="solutions">
+        <div className="solutions-heading"><p className="section-index">APPLICATION SOLUTIONS</p><h2>面向真实任务场景</h2><p>让图像、控制与传感数据穿过距离和遮挡，稳定回到决策端。</p></div>
+        <div className="solution-grid">
+          <article><img src="/products/air.jpg" alt="无人机高清图传" /><div><span>01</span><h3>无人机高清图传</h3><p>高帧率画面与双向数据链路，适配 FPV、巡检和远程操控。</p></div></article>
+          <article><img src="/products/mesh.jpg" alt="应急自组网" /><div><span>02</span><h3>应急自组网</h3><p>节点自动入网和多跳中继，为复杂现场快速补充无线覆盖。</p></div></article>
+          <article><img src="/products/thermal.jpg" alt="热成像感知" /><div><span>03</span><h3>热成像感知</h3><p>轻量非制冷红外模组，服务夜间搜索、巡检和机器人视觉。</p></div></article>
+          <article><img src="/products/cam.jpg" alt="低延迟 FPV" /><div><span>04</span><h3>低延迟 FPV</h3><p>从相机到高功率 VTX，构建反馈直接的模拟视频链路。</p></div></article>
+        </div>
+      </section>
+
       <section className="knowledge-section" id="knowledge">
         <div className="knowledge-intro">
-          <p className="section-index light">02 / KNOWLEDGE</p>
-          <h2>每周一篇，<br />把无线技术讲明白。</h2>
+          <p className="section-index light">ZYRO KNOWLEDGE</p>
+          <h2>读懂无线，<br />再选择设备。</h2>
           <p>从真实链路问题出发，讲清延迟、频率、功率、Mesh、编码与热成像背后的工程逻辑。</p>
           <div className="update-chip"><i /> 每周三更新</div>
         </div>
@@ -257,6 +311,12 @@ export default function Home() {
         <div className="about-stamp"><span>透明</span><b>·</b><span>专业</span><b>·</b><span>长期</span></div>
       </section>
 
+      <section className="support-grid" aria-label="服务与支持">
+        <a href="#products"><span>01</span><h3>帮您选型</h3><p>按任务距离、清晰度、延迟和组网方式找到合适产品。</p><b>→</b></a>
+        <a href="#knowledge"><span>02</span><h3>技术知识</h3><p>从基础原理到测试方法，持续更新可复用的工程内容。</p><b>→</b></a>
+        <a href="/downloads/zyro-portfolio.pdf" target="_blank"><span>03</span><h3>下载中心</h3><p>获取产品总览、用户手册与频段版本资料。</p><b>↓</b></a>
+      </section>
+
       <section className="newsletter" id="contact">
         <div>
           <p className="section-index light">STAY CURIOUS</p>
@@ -274,10 +334,11 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#top"><span className="brand-mark">Z</span><span>ZYRO</span></a>
-        <p>Beyond Distance, In Real Time.</p>
-        <div><a href="#products">产品</a><a href="#knowledge">知识库</a><a href="#about">关于</a></div>
-        <span>© 2026 ZYRO</span>
+        <div className="footer-intro"><a className="brand footer-brand" href="#top"><span className="brand-mark">Z</span><span>ZYRO</span></a><p>Beyond Distance,<br />In Real Time.</p></div>
+        <div className="footer-column"><b>产品分类</b><a href="#products">数字图传</a><a href="#products">模拟图传</a><a href="#products">Mesh 自组网</a><a href="#products">热成像</a></div>
+        <div className="footer-column"><b>解决方案</b><a href="#solutions">无人机图传</a><a href="#solutions">应急通信</a><a href="#solutions">机器人视觉</a><a href="#solutions">分布式视频</a></div>
+        <div className="footer-column"><b>服务与支持</b><a href="#knowledge">技术知识</a><a href="/downloads/zyro-portfolio.pdf" target="_blank">下载中心</a><a href="#contact">联系我们</a></div>
+        <div className="footer-bottom"><span>© 2026 ZYRO</span><span>无线图像与数据链路产品展示</span></div>
       </footer>
     </main>
   );

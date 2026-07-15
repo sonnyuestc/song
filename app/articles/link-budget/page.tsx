@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleShell } from "../ArticleShell";
+import { FresnelFigure, LinkBudgetFigure } from "../PrincipleFigures";
 
 export const metadata: Metadata = {
   title: "发射功率不等于传输距离｜ZYRO 技术科普",
@@ -15,11 +16,12 @@ export default function LinkBudgetArticle() {
       date="2026.06.29"
       readingTime="约 8 分钟"
     >
-      <p className="article-lead">ZYRO 产品覆盖 3-8.2 GHz，多款设备提供不同发射功率和天线配置。比较它们时，不能只看 dBm 或 W：同样的功率，在不同频率、天线、带宽和环境中可能得到完全不同的覆盖结果。</p>
+      <p className="article-lead">无线距离从来不是发射功率单独决定的。ZYRO 产品覆盖 3-8.2 GHz，多款设备提供不同功率和天线配置；同样的 dBm 或 W，在不同频率、带宽、天线和环境中，可能得到完全不同的覆盖结果。</p>
 
       <h2>链路预算是一张“收支表”</h2>
       <p>发射机给出信号功率，天线提供方向性增益；信号在空间传播、线缆和连接器中发生损耗；接收天线再获得一部分增益。简化公式如下：</p>
       <div className="formula">P<sub>接收</sub> = P<sub>发射</sub> + G<sub>发射天线</sub> + G<sub>接收天线</sub> - L<sub>路径</sub> - L<sub>其他</sub></div>
+      <LinkBudgetFigure />
       <p>当接收功率高于接收机灵敏度时，链路才有机会稳定工作。两者的差值叫链路余量。工程上必须留出余量，抵抗姿态变化、衰落、干扰、雨雾与安装误差。</p>
 
       <h2>变量一：发射功率——重要，但收益是对数的</h2>
@@ -34,6 +36,7 @@ export default function LinkBudgetArticle() {
 
       <h2>变量二：频率——越高，空间损耗通常越大</h2>
       <p>在相同距离下，自由空间路径损耗随频率上升而增加。频率从 5 GHz 提高到 8 GHz，理论自由空间损耗约增加 4 dB。更高频段可以提供可用频谱和更小天线等优势，但对遮挡、天线指向和安装细节通常更敏感。</p>
+      <FresnelFigure />
 
       <h2>变量三：天线——把能量送到正确方向</h2>
       <p>全向天线适合移动平台，姿态变化时更容易保持覆盖；定向天线把能量集中到一个方向，可显著提高远距离链路余量。ZYRO Link 的资料同时给出典型全向空地 16 km，以及在定向、低干扰条件下更远的参考能力，差异的关键正是天线与环境。</p>

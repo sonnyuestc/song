@@ -26,7 +26,7 @@ export function ArticleShell({ category, title, deck, date, readingTime, childre
         <div className="article-layout">
           <aside className="article-aside">
             <p>阅读提示</p>
-            <span>本文中的产品数据来自 ZYRO 已发布产品资料。无线链路表现会随天线、遮挡、干扰和法规限制变化。</span>
+            <span>本文中的产品数据来自 ZYRO 已发布产品资料。链路与成像表现会随环境、安装、镜头、配置和测试条件变化。</span>
           </aside>
           <div className="article-body">{children}</div>
         </div>

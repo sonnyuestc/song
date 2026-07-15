@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleShell } from "../ArticleShell";
+import { MeshAirtimeFigure, MeshTopologyFigure } from "../PrincipleFigures";
 
 export const metadata: Metadata = {
   title: "Mesh 自组网为什么适合无人系统？｜ZYRO 技术科普",
@@ -15,7 +16,7 @@ export default function MeshArticle() {
       date="2026.07.06"
       readingTime="约 9 分钟"
     >
-      <p className="article-lead">Mesh 的核心并不是“设备多”，而是节点之间可以自动建立网络关系，并在需要时通过其他节点转发数据。ZYRO Mesh 采用无固定主从的自组织方式，在线节点可访问网络中其他摄像头的视频流，适合拓扑不断变化的移动任务。</p>
+      <p className="article-lead">Mesh 的价值不只是“把更多设备连起来”，而是让节点在拓扑变化时仍能主动寻找可用路径。ZYRO Mesh 采用无固定主从的自组织方式，在线节点可访问网络内其他摄像头的视频流，更适合持续移动、遮挡频繁的任务现场。</p>
 
       <h2>一对一链路遇到的三个现场问题</h2>
       <div className="numbered-points">
@@ -26,16 +27,14 @@ export default function MeshArticle() {
 
       <h2>Mesh 如何改变数据路径</h2>
       <p>在 Mesh 网络里，节点可自动加入同一网络；没有固定主从意味着某个节点离线时，系统不必因为“主节点消失”而整体失效。部署在高点或转角处的节点还能承担中继角色，把原本不可直达的区域接回网络。</p>
-      <div className="mesh-diagram" aria-label="Mesh 多节点链路示意">
-        <div>指挥端</div><span>↔</span><div>中继节点</div><span>↔</span><div>无人车 A</div>
-        <i>↘</i><div className="mesh-lower">无人机 B</div><i>↗</i><div className="mesh-lower">摄像头 C</div>
-      </div>
+      <MeshTopologyFigure />
       <p>ZYRO Mesh 当前资料标注支持最多 2 跳。这里的“跳”是数据经过中间节点转发的次数，并不等于节点总数。每增加一跳都可能扩大覆盖，但也会消耗无线时隙、增加延迟并降低有效吞吐。</p>
 
       <figure className="article-product"><img src="/products/mesh.jpg" alt="ZYRO Mesh 无线自组网设备" /><figcaption>ZYRO Mesh：自动入网、无固定主从，支持 Web 配置与拓扑查看。</figcaption></figure>
 
       <h2>带宽不是平均分配这么简单</h2>
       <p>一条视频流若为 8 Mbps，四个摄像头就需要至少 32 Mbps 的有效吞吐；中继节点还要同时接收和发送，同频转发会继续占用空口时间。因此规划时应为协议开销、链路波动和重传留出余量。</p>
+      <MeshAirtimeFigure />
       <div className="formula">所需有效带宽 ≈ 视频码率总和 × 中继负担 × 安全余量</div>
       <p>ZYRO Mesh 提供 1.25M、2.5M、5M、10M、20M 以及 10/20/40M 等带宽选项。更宽的信道有利于吞吐，但更容易遇到干扰，也会提高噪声底；复杂现场不应默认选择最大带宽。</p>
 
