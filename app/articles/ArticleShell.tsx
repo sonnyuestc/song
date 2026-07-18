@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { sitePath } from "../site-path";
 
 type ArticleShellProps = {
   category: string;
@@ -13,8 +14,8 @@ export function ArticleShell({ category, title, deck, date, readingTime, childre
   return (
     <main className="article-page">
       <header className="article-nav">
-        <a className="brand" href="/" aria-label="返回 ZYRO 首页"><span className="brand-mark">Z</span><span>ZYRO</span></a>
-        <a href="/#knowledge">← 返回知识库</a>
+        <a className="brand" href={sitePath("/")} aria-label="返回 ZYRO 首页"><span className="brand-mark">Z</span><span>ZYRO</span></a>
+        <a href={sitePath("/#knowledge")}>← 返回知识库</a>
       </header>
       <article>
         <header className="article-hero">
@@ -33,9 +34,9 @@ export function ArticleShell({ category, title, deck, date, readingTime, childre
       </article>
       <section className="article-cta">
         <div><p>NEED A LINK PLAN?</p><h2>让我们一起评估你的任务链路。</h2></div>
-        <a href="/#contact">联系 ZYRO <span>→</span></a>
+        <a href={sitePath("/#contact")}>联系 ZYRO <span>→</span></a>
       </section>
-      <footer className="article-footer-nav"><span>© 2026 ZYRO</span><a href="/downloads/zyro-portfolio.pdf" target="_blank">下载产品总览 ↓</a></footer>
+      <footer className="article-footer-nav"><span>© 2026 ZYRO</span><a href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank">下载产品总览 ↓</a></footer>
     </main>
   );
 }

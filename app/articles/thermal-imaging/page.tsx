@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleShell } from "../ArticleShell";
 import { ThermalResolutionFigure, ThermalSpectrumFigure } from "../PrincipleFigures";
+import { sitePath } from "../../site-path";
 
 export const metadata: Metadata = {
   title: "热成像为什么能在黑暗中看见？｜ZYRO 技术科普",
@@ -41,7 +42,7 @@ export default function ThermalImagingArticle() {
       </table>
       <p>高分辨率并不总是唯一答案。近距离避障、低功耗便携设备和对成本敏感的任务，可能更重视体积、功耗和接口；远距离观察或需要算法识别小目标时，更多像元通常更有价值。</p>
 
-      <figure className="article-product"><img src="/products/thermal.jpg" alt="ZYRO Thermal Series 非制冷红外模组" /><figcaption>ZYRO Thermal Series：21 × 21 × 10.3 mm 无镜头模组，提供 MIPI、DVP、USB2.0 等数字接口。</figcaption></figure>
+      <figure className="article-product"><img src={sitePath("/products/thermal.jpg")} alt="ZYRO Thermal Series 非制冷红外模组" /><figcaption>ZYRO Thermal Series：21 × 21 × 10.3 mm 无镜头模组，提供 MIPI、DVP、USB2.0 等数字接口。</figcaption></figure>
 
       <h2>镜头焦距：广角搜索与远距离观察的取舍</h2>
       <p>焦距越短，通常视场越宽，适合大范围搜索；焦距越长，视场越窄，同一目标在画面中占据更多像素，更适合观察远处细节。以 ZYRO 640 为例：</p>
@@ -67,7 +68,7 @@ export default function ThermalImagingArticle() {
 
       <div className="article-sources">
         <b>资料来源</b>
-        <a href="/downloads/zyro-thermal.pdf" target="_blank">ZYRO Thermal Series Product Manual V2.0</a>
+        <a href={sitePath("/downloads/zyro-thermal.pdf")} target="_blank">ZYRO Thermal Series Product Manual V2.0</a>
         <a href="https://www.flir.com/discover/professional-tools/thermal-camera-specs-you-should-know-before-buying/" target="_blank" rel="noreferrer">FLIR：Thermal Camera Specs You Should Know Before Buying</a>
         <a href="https://oem.flir.com/learn/discover/choosing-the-right-thermal-imager-for-your-integrated-project/" target="_blank" rel="noreferrer">FLIR OEM：Choosing the Right Thermal Imager</a>
       </div>

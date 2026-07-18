@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleShell } from "../ArticleShell";
 import { FrameCadenceFigure, LatencyChainFigure } from "../PrincipleFigures";
+import { sitePath } from "../../site-path";
 
 export const metadata: Metadata = {
   title: "图传延迟从哪里来？｜ZYRO 技术科普",
@@ -37,7 +38,7 @@ export default function LatencyArticle() {
       </table>
       <p>ZYRO Air 支持 4K30 到 1080P90。高帧率模式的价值不仅是“更流畅”，还意味着画面采样和刷新更频繁，降低等待下一帧的平均时间。</p>
 
-      <figure className="article-product"><img src="/products/air.jpg" alt="ZYRO Air 空中图传" /><figcaption>ZYRO Air：相机、H.265 编码和无线传输的一体化空中端。</figcaption></figure>
+      <figure className="article-product"><img src={sitePath("/products/air.jpg")} alt="ZYRO Air 空中图传" /><figcaption>ZYRO Air：相机、H.265 编码和无线传输的一体化空中端。</figcaption></figure>
 
       <h2>数字与模拟链路，各自把时间花在哪里？</h2>
       <div className="comparison-grid">

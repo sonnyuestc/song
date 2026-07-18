@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { sitePath } from "./site-path";
 
 const categories = ["全部产品", "数字图传", "模拟图传", "网络通信", "热成像"];
 
@@ -191,7 +192,7 @@ export default function Home() {
           <a href="#solutions" onClick={() => setMenuOpen(false)}>应用解决方案</a>
           <a href="#knowledge" onClick={() => setMenuOpen(false)}>知识库</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>进入 ZYRO</a>
-          <a className="nav-cta" href="/downloads/zyro-portfolio.pdf" target="_blank" onClick={() => setMenuOpen(false)}>产品总览</a>
+          <a className="nav-cta" href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank" onClick={() => setMenuOpen(false)}>产品总览</a>
         </nav>
       </header>
 
@@ -202,11 +203,11 @@ export default function Home() {
           <h2>轻装上阵，稳定抵达</h2>
           <p className="hero-lead">4K30 · 1080P90 · H.265<br />为无人机与移动平台打造的一体化数字图传。</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/downloads/zyro-air.pdf" target="_blank">了解详情 <b>→</b></a>
+            <a className="button button-primary" href={sitePath("/downloads/zyro-air.pdf")} target="_blank">了解详情 <b>→</b></a>
           </div>
         </div>
         <div className="hero-visual" aria-label="ZYRO Air 数字图传产品展示">
-          <img src="/showcase/hero-air-v1.png" alt="ZYRO Air 一体化空中数字图传" />
+          <img src={sitePath("/showcase/hero-air-v1.png")} alt="ZYRO Air 一体化空中数字图传" />
         </div>
         <div className="hero-pagination"><span>01</span><i /><span>03</span></div>
       </section>
@@ -216,8 +217,8 @@ export default function Home() {
       </section>
 
       <section className="featured-product" id="featured">
-        <div className="featured-media"><img src="/showcase/featured-c403-v1.png" alt="ZYRO C403 Max 数字图传套装" /></div>
-        <div className="featured-copy"><p>NEW / DIGITAL HD SYSTEM</p><h2>ZYRO<br />C403 MAX</h2><h3>1080P60 高清图传 · 3–7 GHz 多频段</h3><a href="/downloads/zyro-c403-max.pdf" target="_blank">了解详情 <span>→</span></a></div>
+        <div className="featured-media"><img src={sitePath("/showcase/featured-c403-v1.png")} alt="ZYRO C403 Max 数字图传套装" /></div>
+        <div className="featured-copy"><p>NEW / DIGITAL HD SYSTEM</p><h2>ZYRO<br />C403 MAX</h2><h3>1080P60 高清图传 · 3–7 GHz 多频段</h3><a href={sitePath("/downloads/zyro-c403-max.pdf")} target="_blank">了解详情 <span>→</span></a></div>
       </section>
 
       <section className="section products-section" id="products">
@@ -227,8 +228,8 @@ export default function Home() {
         </div>
         <div className="showcase-grid">
           {productShowcases.map((showcase) => (
-            <a className="showcase-card" href={showcase.href} target="_blank" rel="noreferrer" key={showcase.title}>
-              <img src={showcase.image} alt={`${showcase.title} 产品系列场景展示`} />
+            <a className="showcase-card" href={sitePath(showcase.href)} target="_blank" rel="noreferrer" key={showcase.title}>
+              <img src={sitePath(showcase.image)} alt={`${showcase.title} 产品系列场景展示`} />
               <div className="showcase-copy">
                 <h3>{showcase.title}</h3>
                 <p>{showcase.subtitle}</p>
@@ -255,7 +256,7 @@ export default function Home() {
             <article className="product-card" key={product.name}>
               <div className="product-art">
                 <span className="product-number">0{index + 1}</span>
-                <img src={product.image} alt={product.name} />
+                <img src={sitePath(product.image)} alt={product.name} />
                 <span className="product-pill">{product.label}</span>
               </div>
               <div className="product-info">
@@ -263,7 +264,7 @@ export default function Home() {
                 <h3>{product.name}</h3>
                 <span>{product.description}</span>
                 <div className="spec-chips">{product.specs.map((spec) => <small key={spec}>{spec}</small>)}</div>
-                <a href={product.manual} target="_blank" rel="noreferrer" aria-label={`下载 ${product.name} 产品资料`}>下载产品资料 <b>↓</b></a>
+                <a href={sitePath(product.manual)} target="_blank" rel="noreferrer" aria-label={`下载 ${product.name} 产品资料`}>下载产品资料 <b>↓</b></a>
               </div>
             </article>
           ))}
@@ -273,10 +274,10 @@ export default function Home() {
       <section className="solutions-section" id="solutions">
         <div className="solutions-heading"><p className="section-index">APPLICATION SOLUTIONS</p><h2>面向真实任务场景</h2><p>让图像、控制与传感数据穿过距离和遮挡，稳定回到决策端。</p></div>
         <div className="solution-grid">
-          <article><img src="/products/air.jpg" alt="无人机高清图传" /><div><span>01</span><h3>无人机高清图传</h3><p>高帧率画面与双向数据链路，适配 FPV、巡检和远程操控。</p></div></article>
-          <article><img src="/products/mesh.jpg" alt="应急自组网" /><div><span>02</span><h3>应急自组网</h3><p>节点自动入网和多跳中继，为复杂现场快速补充无线覆盖。</p></div></article>
-          <article><img src="/products/thermal.jpg" alt="热成像感知" /><div><span>03</span><h3>热成像感知</h3><p>轻量非制冷红外模组，服务夜间搜索、巡检和机器人视觉。</p></div></article>
-          <article><img src="/products/cam.jpg" alt="低延迟 FPV" /><div><span>04</span><h3>低延迟 FPV</h3><p>从相机到高功率 VTX，构建反馈直接的模拟视频链路。</p></div></article>
+          <article><img src={sitePath("/products/air.jpg")} alt="无人机高清图传" /><div><span>01</span><h3>无人机高清图传</h3><p>高帧率画面与双向数据链路，适配 FPV、巡检和远程操控。</p></div></article>
+          <article><img src={sitePath("/products/mesh.jpg")} alt="应急自组网" /><div><span>02</span><h3>应急自组网</h3><p>节点自动入网和多跳中继，为复杂现场快速补充无线覆盖。</p></div></article>
+          <article><img src={sitePath("/products/thermal.jpg")} alt="热成像感知" /><div><span>03</span><h3>热成像感知</h3><p>轻量非制冷红外模组，服务夜间搜索、巡检和机器人视觉。</p></div></article>
+          <article><img src={sitePath("/products/cam.jpg")} alt="低延迟 FPV" /><div><span>04</span><h3>低延迟 FPV</h3><p>从相机到高功率 VTX，构建反馈直接的模拟视频链路。</p></div></article>
         </div>
       </section>
 
@@ -289,7 +290,7 @@ export default function Home() {
         </div>
         <div className="article-list">
           {articles.map((article, index) => (
-            <a className="article-card" href={article.href} key={article.title}>
+            <a className="article-card" href={sitePath(article.href)} key={article.title}>
               <span className="article-no">0{index + 1}</span>
               <div>
                 <p><b>{article.tag}</b><span>{article.date}</span></p>
@@ -314,7 +315,7 @@ export default function Home() {
       <section className="support-grid" aria-label="服务与支持">
         <a href="#products"><span>01</span><h3>帮您选型</h3><p>按任务距离、清晰度、延迟和组网方式找到合适产品。</p><b>→</b></a>
         <a href="#knowledge"><span>02</span><h3>技术知识</h3><p>从基础原理到测试方法，持续更新可复用的工程内容。</p><b>→</b></a>
-        <a href="/downloads/zyro-portfolio.pdf" target="_blank"><span>03</span><h3>下载中心</h3><p>获取产品总览、用户手册与频段版本资料。</p><b>↓</b></a>
+        <a href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank"><span>03</span><h3>下载中心</h3><p>获取产品总览、用户手册与频段版本资料。</p><b>↓</b></a>
       </section>
 
       <section className="newsletter" id="contact">
@@ -337,7 +338,7 @@ export default function Home() {
         <div className="footer-intro"><a className="brand footer-brand" href="#top"><span className="brand-mark">Z</span><span>ZYRO</span></a><p>Beyond Distance,<br />In Real Time.</p></div>
         <div className="footer-column"><b>产品分类</b><a href="#products">数字图传</a><a href="#products">模拟图传</a><a href="#products">Mesh 自组网</a><a href="#products">热成像</a></div>
         <div className="footer-column"><b>解决方案</b><a href="#solutions">无人机图传</a><a href="#solutions">应急通信</a><a href="#solutions">机器人视觉</a><a href="#solutions">分布式视频</a></div>
-        <div className="footer-column"><b>服务与支持</b><a href="#knowledge">技术知识</a><a href="/downloads/zyro-portfolio.pdf" target="_blank">下载中心</a><a href="#contact">联系我们</a></div>
+        <div className="footer-column"><b>服务与支持</b><a href="#knowledge">技术知识</a><a href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank">下载中心</a><a href="#contact">联系我们</a></div>
         <div className="footer-bottom"><span>© 2026 ZYRO</span><span>无线图像与数据链路产品展示</span></div>
       </footer>
     </main>

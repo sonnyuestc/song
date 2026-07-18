@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleShell } from "../ArticleShell";
 import { MeshAirtimeFigure, MeshTopologyFigure } from "../PrincipleFigures";
+import { sitePath } from "../../site-path";
 
 export const metadata: Metadata = {
   title: "Mesh 自组网为什么适合无人系统？｜ZYRO 技术科普",
@@ -30,7 +31,7 @@ export default function MeshArticle() {
       <MeshTopologyFigure />
       <p>ZYRO Mesh 当前资料标注支持最多 2 跳。这里的“跳”是数据经过中间节点转发的次数，并不等于节点总数。每增加一跳都可能扩大覆盖，但也会消耗无线时隙、增加延迟并降低有效吞吐。</p>
 
-      <figure className="article-product"><img src="/products/mesh.jpg" alt="ZYRO Mesh 无线自组网设备" /><figcaption>ZYRO Mesh：自动入网、无固定主从，支持 Web 配置与拓扑查看。</figcaption></figure>
+      <figure className="article-product"><img src={sitePath("/products/mesh.jpg")} alt="ZYRO Mesh 无线自组网设备" /><figcaption>ZYRO Mesh：自动入网、无固定主从，支持 Web 配置与拓扑查看。</figcaption></figure>
 
       <h2>带宽不是平均分配这么简单</h2>
       <p>一条视频流若为 8 Mbps，四个摄像头就需要至少 32 Mbps 的有效吞吐；中继节点还要同时接收和发送，同频转发会继续占用空口时间。因此规划时应为协议开销、链路波动和重传留出余量。</p>

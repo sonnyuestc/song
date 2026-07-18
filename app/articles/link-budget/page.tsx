@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleShell } from "../ArticleShell";
 import { FresnelFigure, LinkBudgetFigure } from "../PrincipleFigures";
+import { sitePath } from "../../site-path";
 
 export const metadata: Metadata = {
   title: "发射功率不等于传输距离｜ZYRO 技术科普",
@@ -32,7 +33,7 @@ export default function LinkBudgetArticle() {
       </table>
       <p>ZYRO 3W VTX 系列支持 25 mW、1 W、2 W、3 W 四档，并具备温度保护。高功率需要足够散热且必须先接天线再上电；温度过高时设备会逐级降功率保护射频器件。</p>
 
-      <figure className="article-product"><img src="/products/tx3w.jpg" alt="ZYRO 3W 宽频视频发射模块" /><figcaption>ZYRO 3W VTX 系列覆盖 4.9-6.1、6.1-7.2、7.1-8.2 GHz 三个版本。</figcaption></figure>
+      <figure className="article-product"><img src={sitePath("/products/tx3w.jpg")} alt="ZYRO 3W 宽频视频发射模块" /><figcaption>ZYRO 3W VTX 系列覆盖 4.9-6.1、6.1-7.2、7.1-8.2 GHz 三个版本。</figcaption></figure>
 
       <h2>变量二：频率——越高，空间损耗通常越大</h2>
       <p>在相同距离下，自由空间路径损耗随频率上升而增加。频率从 5 GHz 提高到 8 GHz，理论自由空间损耗约增加 4 dB。更高频段可以提供可用频谱和更小天线等优势，但对遮挡、天线指向和安装细节通常更敏感。</p>
