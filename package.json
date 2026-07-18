@@ -8,8 +8,10 @@
   "scripts": {
     "dev": "node scripts/run-vinext.mjs dev",
     "build": "node scripts/run-vinext.mjs build",
-    "build:wiki": "node scripts/build-wiki.mjs",
-    "package:wiki": "npm run build:wiki && node scripts/package-wiki.mjs",
+    "build:wiki": "node scripts/build-wiki.mjs /wiki https://www.zyrolink.cn",
+    "package:wiki": "npm run build:wiki && node scripts/package-wiki.mjs /wiki zyro-wiki-upload wiki https://www.zyrolink.cn",
+    "build:pages": "node scripts/build-wiki.mjs /song https://sonnyuestc.github.io",
+    "package:pages": "npm run build:pages && node scripts/package-wiki.mjs /song github-pages . https://sonnyuestc.github.io",
     "start": "node scripts/run-vinext.mjs start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",

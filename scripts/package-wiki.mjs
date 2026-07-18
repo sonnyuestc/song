@@ -3,8 +3,12 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const projectRoot = process.cwd();
-const outputRoot = path.join(projectRoot, "outputs", "zyro-wiki-upload");
-const wikiRoot = path.join(outputRoot, "wiki");
+const basePath = process.argv[2] ?? "/wiki";
+const outputName = process.argv[3] ?? "zyro-wiki-upload";
+const contentDirectory = process.argv[4] ?? "wiki";
+const siteOrigin = process.argv[5] ?? "https://www.zyrolink.cn";
+const outputRoot = path.join(projectRoot, "outputs", outputName);
+const siteRoot = contentDirectory === "." ? outputRoot : path.join(outputRoot, contentDirectory);
 const clientRoot = path.join(projectRoot, "dist", "client");
 const workerUrl = pathToFileURL(path.join(projectRoot, "dist", "server", "index.js"));
 workerUrl.searchParams.set("package", `${process.pid}-${Date.now()}`);
@@ -12,30 +16,33 @@ workerUrl.searchParams.set("package", `${process.pid}-${Date.now()}`);
 if (!outputRoot.startsWith(path.join(projectRoot, "outputs") + path.sep)) {
   throw new Error("Refusing to replace a package directory outside outputs.");
 }
+if (!/^\/[a-zA-Z0-9_-]+$/.test(basePath) || !/^[a-zA-Z0-9._-]+$/.test(outputName)) {
+  throw new Error("Invalid static package arguments.");
+}
 
 await rm(outputRoot, { recursive: true, force: true });
-await mkdir(wikiRoot, { recursive: true });
-await cp(clientRoot, wikiRoot, { recursive: true });
+await mkdir(siteRoot, { recursive: true });
+await cp(clientRoot, siteRoot, { recursive: true });
 
 const { default: worker } = await import(workerUrl.href);
 const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
 const context = { waitUntil() {}, passThroughOnException() {} };
 const routes = [
-  ["/wiki/", "index.html"],
-  ["/wiki/articles/latency/", "articles/latency/index.html"],
-  ["/wiki/articles/link-budget/", "articles/link-budget/index.html"],
-  ["/wiki/articles/mesh-networking/", "articles/mesh-networking/index.html"],
-  ["/wiki/articles/thermal-imaging/", "articles/thermal-imaging/index.html"],
+  [`${basePath}/`, "index.html"],
+  [`${basePath}/articles/latency/`, "articles/latency/index.html"],
+  [`${basePath}/articles/link-budget/`, "articles/link-budget/index.html"],
+  [`${basePath}/articles/mesh-networking/`, "articles/mesh-networking/index.html"],
+  [`${basePath}/articles/thermal-imaging/`, "articles/thermal-imaging/index.html"],
 ];
 
 for (const [route, relativeFile] of routes) {
   const response = await worker.fetch(
-    new Request(`https://www.zyrolink.cn${route}`, { headers: { accept: "text/html" } }),
+    new Request(`${siteOrigin}${route}`, { headers: { accept: "text/html" } }),
     env,
     context,
   );
   if (!response.ok) throw new Error(`Failed to render ${route}: HTTP ${response.status}`);
-  const target = path.join(wikiRoot, relativeFile);
+  const target = path.join(siteRoot, relativeFile);
   await mkdir(path.dirname(target), { recursive: true });
   await writeFile(target, await response.text(), "utf8");
 }
@@ -69,12 +76,16 @@ const instructions = `ZYRO Wiki 手动部署包
 如服务器实际使用 Apache/Caddy，保留 wiki 文件夹结构，将 /wiki/ 映射到该目录即可。
 `;
 
-await writeFile(path.join(outputRoot, "nginx-wiki.conf"), nginx, "utf8");
-await writeFile(path.join(outputRoot, "README-部署说明.txt"), instructions, "utf8");
+if (basePath === "/wiki") {
+  await writeFile(path.join(outputRoot, "nginx-wiki.conf"), nginx, "utf8");
+  await writeFile(path.join(outputRoot, "README-部署说明.txt"), instructions, "utf8");
+} else {
+  await writeFile(path.join(siteRoot, ".nojekyll"), "", "utf8");
+}
 
-const homepage = await readFile(path.join(wikiRoot, "index.html"), "utf8");
-if (!homepage.includes("/wiki/assets/") || !homepage.includes("/wiki/articles/latency")) {
-  throw new Error("Rendered homepage does not contain the expected /wiki/ asset and article paths.");
+const homepage = await readFile(path.join(siteRoot, "index.html"), "utf8");
+if (!homepage.includes(`${basePath}/assets/`) || !homepage.includes(`${basePath}/articles/latency`)) {
+  throw new Error(`Rendered homepage does not contain the expected ${basePath}/ paths.`);
 }
 
 console.log(outputRoot);

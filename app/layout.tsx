@@ -3,11 +3,12 @@ import "./globals.css";
 import { sitePath } from "./site-path";
 
 const ogImage = sitePath("/og-zyro.png");
+const siteOrigin = process.env.NEXT_PUBLIC_SITE_ORIGIN ?? "https://www.zyrolink.cn";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.zyrolink.cn"),
+  metadataBase: new URL(siteOrigin),
   title: "ZYRO｜Wireless Imaging & Data Link",
   description: "ZYRO 无线图像与数据链路产品：数字图传、模拟 FPV、Mesh 自组网与热成像模组。",
   icons: { icon: sitePath("/favicon.svg") },
