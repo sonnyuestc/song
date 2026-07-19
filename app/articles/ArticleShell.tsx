@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { sitePath } from "../site-path";
+import { SiteHeader } from "../SiteHeader";
 
 type ArticleShellProps = {
   category: string;
@@ -13,10 +13,7 @@ type ArticleShellProps = {
 export function ArticleShell({ category, title, deck, date, readingTime, children }: ArticleShellProps) {
   return (
     <main className="article-page">
-      <header className="article-nav">
-        <a className="brand" href={sitePath("/")} aria-label="返回 ZYRO 首页"><span className="brand-mark">Z</span><span>ZYRO</span></a>
-        <a href={sitePath("/#knowledge")}>← 返回知识库</a>
-      </header>
+      <SiteHeader />
       <article>
         <header className="article-hero">
           <p className="article-kicker">{category} / ZYRO KNOWLEDGE</p>
@@ -34,9 +31,14 @@ export function ArticleShell({ category, title, deck, date, readingTime, childre
       </article>
       <section className="article-cta">
         <div><p>NEED A LINK PLAN?</p><h2>让我们一起评估你的任务链路。</h2></div>
-        <a href={sitePath("/#contact")}>联系 ZYRO <span>→</span></a>
+        <a href="mailto:song_uestc@126.com">发送邮件 <span>→</span></a>
       </section>
-      <footer className="article-footer-nav"><span>© 2026 ZYRO</span><a href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank">下载产品总览 ↓</a></footer>
+      <footer className="article-footer-nav">
+        <span>© 2026 ZYRO</span>
+        <a href="mailto:song_uestc@126.com">song_uestc@126.com</a>
+        <a href="https://wa.me/8613480720937" target="_blank" rel="noreferrer">WhatsApp: +86 134 8072 0937</a>
+        <a href="https://www.zyrolink.cn" target="_blank" rel="noreferrer">www.zyrolink.cn</a>
+      </footer>
     </main>
   );
 }

@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { sitePath } from "./site-path";
+import { SiteHeader } from "./SiteHeader";
 
 const categories = ["全部产品", "数字图传", "模拟图传", "网络通信", "热成像"];
 
@@ -158,8 +159,13 @@ const articles = [
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("全部产品");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [subscribed, setSubscribed] = useState(false);
+
+  useEffect(() => {
+    const requestedCategory = new URLSearchParams(window.location.search).get("category");
+    if (requestedCategory && categories.includes(requestedCategory)) {
+      setActiveCategory(requestedCategory);
+    }
+  }, []);
 
   const filteredProducts = useMemo(
     () =>
@@ -171,30 +177,7 @@ export default function Home() {
 
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="返回首页">
-          <span className="brand-mark">Z</span>
-          <span>ZYRO</span>
-        </a>
-        <button
-          className="menu-button"
-          type="button"
-          aria-label="打开导航菜单"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((value) => !value)}
-        >
-          <span />
-          <span />
-        </button>
-        <nav className={menuOpen ? "nav-links nav-open" : "nav-links"} aria-label="主导航">
-          <a href="#featured" onClick={() => setMenuOpen(false)}>新品</a>
-          <a href="#products" onClick={() => setMenuOpen(false)}>产品</a>
-          <a href="#solutions" onClick={() => setMenuOpen(false)}>应用解决方案</a>
-          <a href="#knowledge" onClick={() => setMenuOpen(false)}>知识库</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>进入 ZYRO</a>
-          <a className="nav-cta" href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank" onClick={() => setMenuOpen(false)}>产品总览</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <div className="hero-copy">
@@ -320,25 +303,21 @@ export default function Home() {
 
       <section className="newsletter" id="contact">
         <div>
-          <p className="section-index light">STAY CURIOUS</p>
-          <h2>{subscribed ? "已为你登记更新提醒" : "获取 ZYRO 产品与技术更新。"}</h2>
+          <p className="section-index light">CONTACT ZYRO</p>
+          <h2>产品咨询与技术合作，欢迎联系。</h2>
         </div>
-        {subscribed ? (
-          <p className="success-note">感谢关注。正式接入邮件服务后，你将在每周文章发布时收到通知。</p>
-        ) : (
-          <form onSubmit={(event) => { event.preventDefault(); setSubscribed(true); }}>
-            <label className="sr-only" htmlFor="email">邮箱地址</label>
-            <input id="email" type="email" required placeholder="输入你的邮箱地址" />
-            <button type="submit">订阅每周新知 <span>→</span></button>
-          </form>
-        )}
+        <div className="contact-links">
+          <a href="mailto:song_uestc@126.com"><span>EMAIL</span><b>song_uestc@126.com</b><i>→</i></a>
+          <a href="https://wa.me/8613480720937" target="_blank" rel="noreferrer"><span>WHATSAPP</span><b>+86 134 8072 0937</b><i>→</i></a>
+          <a href="https://www.zyrolink.cn" target="_blank" rel="noreferrer"><span>WEBSITE</span><b>www.zyrolink.cn</b><i>→</i></a>
+        </div>
       </section>
 
       <footer>
         <div className="footer-intro"><a className="brand footer-brand" href="#top"><span className="brand-mark">Z</span><span>ZYRO</span></a><p>Beyond Distance,<br />In Real Time.</p></div>
         <div className="footer-column"><b>产品分类</b><a href="#products">数字图传</a><a href="#products">模拟图传</a><a href="#products">Mesh 自组网</a><a href="#products">热成像</a></div>
         <div className="footer-column"><b>解决方案</b><a href="#solutions">无人机图传</a><a href="#solutions">应急通信</a><a href="#solutions">机器人视觉</a><a href="#solutions">分布式视频</a></div>
-        <div className="footer-column"><b>服务与支持</b><a href="#knowledge">技术知识</a><a href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank">下载中心</a><a href="#contact">联系我们</a></div>
+        <div className="footer-column"><b>联系我们</b><a href="mailto:song_uestc@126.com">song_uestc@126.com</a><a href="https://wa.me/8613480720937" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://www.zyrolink.cn" target="_blank" rel="noreferrer">www.zyrolink.cn</a></div>
         <div className="footer-bottom"><span>© 2026 ZYRO</span><span>无线图像与数据链路产品展示</span></div>
       </footer>
     </main>
