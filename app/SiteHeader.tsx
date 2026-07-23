@@ -35,6 +35,7 @@ const navGroups: NavGroup[] = [
     label: "知识库",
     href: "/#knowledge",
     items: [
+      { label: "分辨率、帧率与码率", href: "/articles/video-bitrate" },
       { label: "热成像基础", href: "/articles/thermal-imaging" },
       { label: "图传延迟", href: "/articles/latency" },
       { label: "Mesh 自组网", href: "/articles/mesh-networking" },

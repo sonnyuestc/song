@@ -33,6 +33,7 @@ const routes = [
   [`${basePath}/articles/link-budget/`, "articles/link-budget/index.html"],
   [`${basePath}/articles/mesh-networking/`, "articles/mesh-networking/index.html"],
   [`${basePath}/articles/thermal-imaging/`, "articles/thermal-imaging/index.html"],
+  [`${basePath}/articles/video-bitrate/`, "articles/video-bitrate/index.html"],
 ];
 
 for (const [route, relativeFile] of routes) {
@@ -84,7 +85,11 @@ if (basePath === "/wiki") {
 }
 
 const homepage = await readFile(path.join(siteRoot, "index.html"), "utf8");
-if (!homepage.includes(`${basePath}/assets/`) || !homepage.includes(`${basePath}/articles/latency`)) {
+if (
+  !homepage.includes(`${basePath}/assets/`) ||
+  !homepage.includes(`${basePath}/articles/latency`) ||
+  !homepage.includes(`${basePath}/articles/video-bitrate`)
+) {
   throw new Error(`Rendered homepage does not contain the expected ${basePath}/ paths.`);
 }
 

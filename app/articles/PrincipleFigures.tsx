@@ -133,3 +133,37 @@ export function ThermalResolutionFigure() {
     </figure>
   );
 }
+
+export function VideoDataFlowFigure() {
+  return (
+    <figure className="principle-figure video-data-flow" aria-labelledby="video-data-flow-caption">
+      <div className="figure-heading"><span>原理图 01</span><b>分辨率、帧率和码率分别控制什么？</b></div>
+      <div className="video-factor-grid">
+        <div><i>01</i><strong>分辨率</strong><span>每一帧包含多少像素</span><b>画面空间细节</b></div>
+        <em>×</em>
+        <div><i>02</i><strong>帧率</strong><span>每秒生成多少帧</span><b>运动时间细节</b></div>
+        <em>→</em>
+        <div className="encoder-stage"><i>03</i><strong>H.265 编码</strong><span>利用帧内与帧间冗余压缩</span><b>质量与效率取舍</b></div>
+        <em>→</em>
+        <div className="bitrate-stage"><i>04</i><strong>视频码率</strong><span>编码后每秒产生的数据量</span><b>占用链路吞吐</b></div>
+      </div>
+      <figcaption id="video-data-flow-caption">分辨率和帧率描述视频源，码率描述压缩后的数据流。三者相关，但不能互相替代；同样是 1080p60，不同场景和编码设置可能产生完全不同的码率。</figcaption>
+    </figure>
+  );
+}
+
+export function ThroughputHeadroomFigure() {
+  return (
+    <figure className="principle-figure throughput-headroom" aria-labelledby="throughput-headroom-caption">
+      <div className="figure-heading"><span>原理图 02</span><b>链路容量不能全部分给视频</b></div>
+      <div className="throughput-bar" aria-label="链路容量分配示意">
+        <span className="video-share"><b>视频净荷</b><small>随画面复杂度波动</small></span>
+        <span className="protocol-share"><b>协议开销</b><small>封装、管理与确认</small></span>
+        <span className="control-share"><b>控制 / 遥测</b><small>任务数据与指令</small></span>
+        <span className="reserve-share"><b>安全余量</b><small>重传、干扰与速率下降</small></span>
+      </div>
+      <div className="headroom-note"><strong>稳定传输的条件</strong><span>业务峰值码率 + 协议开销 + 控制数据 + 余量</span><em>&lt;</em><span>现场可持续有效吞吐</span></div>
+      <figcaption id="throughput-headroom-caption">产品标注的最高吞吐不等于任务现场始终可用的净视频带宽。距离、干扰、天线姿态和中继都会让有效吞吐变化，因此需要为峰值和重传留出余量。</figcaption>
+    </figure>
+  );
+}

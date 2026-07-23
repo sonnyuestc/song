@@ -124,8 +124,16 @@ const products = [
 
 const articles = [
   {
-    tag: "热成像基础",
+    tag: "视频传输基础",
     date: "本周更新",
+    title: "4K、90 fps 与 Mbps：高清视频回传为什么不能只看分辨率？",
+    excerpt: "从像素、帧周期、H.265 压缩到链路余量，拆开视频源参数与无线吞吐之间的关系。",
+    read: "7 分钟阅读",
+    href: "/articles/video-bitrate",
+  },
+  {
+    tag: "热成像基础",
+    date: "07.15",
     title: "没有可见光，热成像为什么仍能看见？",
     excerpt: "从 8–14 μm 热辐射到 NETD、红外分辨率和镜头视场，读懂热成像选型中的四个关键概念。",
     read: "8 分钟阅读",
