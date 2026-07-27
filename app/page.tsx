@@ -124,8 +124,16 @@ const products = [
 
 const articles = [
   {
-    tag: "视频传输基础",
+    tag: "射频基础",
     date: "本周更新",
+    title: "图传天线为什么会影响画面？先读懂极化、方向与安装",
+    excerpt: "从线极化、圆极化、方向图到机体遮挡，排查图传链路中最容易被忽略的天线问题。",
+    read: "7 分钟阅读",
+    href: "/articles/antenna-polarization",
+  },
+  {
+    tag: "视频传输基础",
+    date: "07.23",
     title: "4K、90 fps 与 Mbps：高清视频回传为什么不能只看分辨率？",
     excerpt: "从像素、帧周期、H.265 压缩到链路余量，拆开视频源参数与无线吞吐之间的关系。",
     read: "7 分钟阅读",

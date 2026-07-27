@@ -640,6 +640,17 @@ body { background: #edf5f7; color: #071925; }
 .resolution-note { padding: 15px 18px; display: grid; grid-template-columns: auto 1fr auto auto 1fr; align-items: center; gap: 12px; border: 1px solid #c3dfe5; background: #e7f6f8; }.resolution-note b { color: #0788a4; font-size: 10px; }.resolution-note span { color: #5f7880; font-size: 9px; }.resolution-note i { color: #08a7c7; font-style: normal; }
 .article-sources { margin-top: 55px; padding-top: 24px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(14,82,101,.16); font-size: 11px; }.article-sources b { margin-bottom: 3px; color: #082b39; letter-spacing: .1em; }.article-sources a { width: fit-content; color: #087e99; border-bottom: 1px solid rgba(8,126,153,.28); }
 
+/* Antenna polarization article figure */
+.polarization-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.polarization-grid section { min-height: 218px; padding: 17px; border: 1px solid #c3dfe5; background: rgba(255,255,255,.88); }
+.polarization-grid section > p { margin: 0; color: #0788a4; font-size: 9px; font-weight: 900; letter-spacing: .1em; }
+.polarization-pair { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; margin: 20px 0 15px; text-align: center; }
+.polarization-pair > div { min-height: 100px; padding: 12px 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #b8dce3; background: #effbfc; }
+.polarization-pair > em { color: #069ab8; font-size: 18px; font-style: normal; }.polarization-pair strong { margin-top: 8px; color: #103b47; font-size: 10px; }.polarization-grid small { display: block; color: #607982; font-size: 10px; line-height: 1.6; }
+.linear-wave { width: 11px; height: 50px; display: block; position: relative; border-radius: 8px; background: repeating-linear-gradient(to bottom, #0799b7 0 5px, transparent 5px 9px); }.linear-wave::after { content: ""; position: absolute; left: -7px; right: -7px; top: 22px; height: 6px; border-top: 2px solid #0799b7; border-bottom: 2px solid #0799b7; }.linear-wave.horizontal { transform: rotate(90deg); }.polarization-grid .mismatch { border-color: #e0c7a7; background: #fffaf2; }.mismatch .polarization-pair > div { border-color: #ead3b7; background: #fffdf8; }.mismatch .polarization-pair > em { color: #d47928; }.circular-pair i { width: 50px; height: 50px; display: grid; place-items: center; border: 2px solid #0799b7; border-radius: 50%; color: #0799b7; font-size: 28px; font-style: normal; line-height: 1; }
+
+@media (max-width: 700px) { .polarization-grid { grid-template-columns: 1fr; }.polarization-grid section { min-height: 0; }.polarization-pair { max-width: 280px; margin-left: auto; margin-right: auto; } }
+
 /* Video bitrate article figures */
 .video-factor-grid { display: grid; grid-template-columns: 1fr auto 1fr auto 1.1fr auto 1.1fr; align-items: stretch; gap: 8px; }
 .video-factor-grid > div { min-height: 145px; padding: 16px; display: flex; flex-direction: column; border: 1px solid #bfdde3; background: rgba(255,255,255,.94); }

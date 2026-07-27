@@ -167,3 +167,35 @@ export function ThroughputHeadroomFigure() {
     </figure>
   );
 }
+
+export function PolarizationFigure() {
+  return (
+    <figure className="principle-figure polarization-figure" aria-labelledby="polarization-caption">
+      <div className="figure-heading"><span>原理图 01</span><b>线极化的方向需要对齐，圆极化的旋向需要一致</b></div>
+      <div className="polarization-grid">
+        <section>
+          <p>线极化 / LINEAR</p>
+          <div className="polarization-pair">
+            <div><i className="linear-wave vertical" /><strong>垂直</strong></div><em>⇄</em><div><i className="linear-wave vertical" /><strong>垂直</strong></div>
+          </div>
+          <small>两端方向平行时，耦合更充分</small>
+        </section>
+        <section className="mismatch">
+          <p>线极化失配</p>
+          <div className="polarization-pair">
+            <div><i className="linear-wave vertical" /><strong>垂直</strong></div><em>×</em><div><i className="linear-wave horizontal" /><strong>水平</strong></div>
+          </div>
+          <small>相差 90° 时会出现明显极化失配</small>
+        </section>
+        <section>
+          <p>圆极化 / CIRCULAR</p>
+          <div className="polarization-pair circular-pair">
+            <div><i>↻</i><strong>RHCP</strong></div><em>⇄</em><div><i>↻</i><strong>RHCP</strong></div>
+          </div>
+          <small>两端旋向相同；RHCP 与 LHCP 是相反旋向</small>
+        </section>
+      </div>
+      <figcaption id="polarization-caption">极化描述的是电场矢量随时间的取向。实际链路还会受到天线方向图、遮挡、反射和安装位置影响；极化匹配是让链路按预期工作的必要检查项之一。</figcaption>
+    </figure>
+  );
+}
