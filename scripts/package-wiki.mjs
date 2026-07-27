@@ -29,6 +29,7 @@ const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 4
 const context = { waitUntil() {}, passThroughOnException() {} };
 const routes = [
   [`${basePath}/`, "index.html"],
+  [`${basePath}/articles/antenna-polarization/`, "articles/antenna-polarization/index.html"],
   [`${basePath}/articles/latency/`, "articles/latency/index.html"],
   [`${basePath}/articles/link-budget/`, "articles/link-budget/index.html"],
   [`${basePath}/articles/mesh-networking/`, "articles/mesh-networking/index.html"],
@@ -87,6 +88,7 @@ if (basePath === "/wiki") {
 const homepage = await readFile(path.join(siteRoot, "index.html"), "utf8");
 if (
   !homepage.includes(`${basePath}/assets/`) ||
+  !homepage.includes(`${basePath}/articles/antenna-polarization`) ||
   !homepage.includes(`${basePath}/articles/latency`) ||
   !homepage.includes(`${basePath}/articles/video-bitrate`)
 ) {
