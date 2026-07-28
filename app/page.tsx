@@ -124,8 +124,16 @@ const products = [
 
 const articles = [
   {
-    tag: "模拟图传基础",
+    tag: "射频基础",
     date: "本周更新",
+    title: "双天线图传不是距离翻倍：分集接收到底在解决什么？",
+    excerpt: "从多径衰落、空间分集到安装检查，理解多天线图传如何降低动态环境中的链路波动。",
+    read: "6 分钟阅读",
+    href: "/articles/antenna-diversity",
+  },
+  {
+    tag: "模拟图传基础",
+    date: "07.27",
     title: "模拟图传怎么选频？先分清频段、频道与干扰间隔",
     excerpt: "从 5.8 GHz、频道表到同场飞行的频率间隔，建立一套可复现的模拟图传选频方法。",
     read: "7 分钟阅读",
