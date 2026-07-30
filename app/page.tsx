@@ -124,8 +124,16 @@ const products = [
 
 const articles = [
   {
-    tag: "射频基础",
+    tag: "成像基础",
     date: "本周更新",
+    title: "逆光 FPV 为什么看不清？WDR 解决的是什么问题",
+    excerpt: "从高反差场景、曝光取舍到 WDR 的边界，理解 FPV 画面为什么会在明暗交界处失去细节。",
+    read: "6 分钟阅读",
+    href: "/articles/wdr-backlight",
+  },
+  {
+    tag: "射频基础",
+    date: "07.28",
     title: "双天线图传不是距离翻倍：分集接收到底在解决什么？",
     excerpt: "从多径衰落、空间分集到安装检查，理解多天线图传如何降低动态环境中的链路波动。",
     read: "6 分钟阅读",
