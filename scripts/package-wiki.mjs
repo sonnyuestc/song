@@ -29,6 +29,7 @@ const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 4
 const context = { waitUntil() {}, passThroughOnException() {} };
 const routes = [
   [`${basePath}/`, "index.html"],
+  [`${basePath}/articles/vtx-antenna-safety/`, "articles/vtx-antenna-safety/index.html"],
   [`${basePath}/articles/wdr-backlight/`, "articles/wdr-backlight/index.html"],
   [`${basePath}/articles/antenna-diversity/`, "articles/antenna-diversity/index.html"],
   [`${basePath}/articles/analog-frequency-planning/`, "articles/analog-frequency-planning/index.html"],
@@ -91,6 +92,7 @@ if (basePath === "/wiki") {
 const homepage = await readFile(path.join(siteRoot, "index.html"), "utf8");
 if (
   !homepage.includes(`${basePath}/assets/`) ||
+  !homepage.includes(`${basePath}/articles/vtx-antenna-safety`) ||
   !homepage.includes(`${basePath}/articles/wdr-backlight`) ||
   !homepage.includes(`${basePath}/articles/antenna-diversity`) ||
   !homepage.includes(`${basePath}/articles/analog-frequency-planning`) ||

@@ -35,6 +35,7 @@ const navGroups: NavGroup[] = [
     label: "知识库",
     href: "/#knowledge",
     items: [
+      { label: "发射端与天线检查", href: "/articles/vtx-antenna-safety" },
       { label: "双天线与分集接收", href: "/articles/antenna-diversity" },
       { label: "模拟图传选频", href: "/articles/analog-frequency-planning" },
       { label: "分辨率、帧率与码率", href: "/articles/video-bitrate" },

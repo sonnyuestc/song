@@ -124,8 +124,16 @@ const products = [
 
 const articles = [
   {
-    tag: "成像基础",
+    tag: "模拟图传基础",
     date: "本周更新",
+    title: "图传发射端为什么必须先接天线？别让功率反射回设备",
+    excerpt: "从阻抗匹配、反射功率到现场检查，理解为什么视频发射端不应在未接妥天线时上电发射。",
+    read: "6 分钟阅读",
+    href: "/articles/vtx-antenna-safety",
+  },
+  {
+    tag: "成像基础",
+    date: "07.30",
     title: "逆光 FPV 为什么看不清？WDR 解决的是什么问题",
     excerpt: "从高反差场景、曝光取舍到 WDR 的边界，理解 FPV 画面为什么会在明暗交界处失去细节。",
     read: "6 分钟阅读",
