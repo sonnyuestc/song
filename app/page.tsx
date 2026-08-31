@@ -124,6 +124,14 @@ const products = [
 
 const articles = [
   {
+    tag: "成像基础",
+    date: "本周更新",
+    title: "广角看得多，为什么边缘会变形？读懂 FOV 与镜头畸变",
+    excerpt: "从视场角、焦距、传感器到桶形畸变，理解 FPV 相机的广角画面该怎样判断和使用。",
+    read: "6 分钟阅读",
+    href: "/articles/fov-and-distortion",
+  },
+  {
     tag: "射频基础",
     date: "本周更新",
     title: "看得到不等于链路通畅：菲涅尔区为什么需要留空",
