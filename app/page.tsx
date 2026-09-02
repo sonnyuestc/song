@@ -124,6 +124,14 @@ const products = [
 
 const articles = [
   {
+    tag: "飞行信息",
+    date: "本周更新",
+    title: "FPV 画面上的字到底从哪来？OSD 不是装饰",
+    excerpt: "从电压、电流、飞行模式到返航方向，读懂 FPV OSD 如何把飞控数据叠加到实时画面。",
+    read: "6 分钟阅读",
+    href: "/articles/fpv-osd-basics",
+  },
+  {
     tag: "成像基础",
     date: "本周更新",
     title: "广角看得多，为什么边缘会变形？读懂 FOV 与镜头畸变",
