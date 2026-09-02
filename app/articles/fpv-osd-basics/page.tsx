@@ -16,7 +16,7 @@ export default function FpvOsdBasicsArticle() {
       <p>相机输出的是实时视频；飞控会汇集电池电压、电流、飞行模式等机载数据，GPS、接收机或其他外设接入后还可能提供位置、距离、方向或链路状态。OSD（On-Screen Display，屏幕叠加显示）将可用的数据以图标、数字或提示叠加在视频上，而不是把数据“拍”进镜头里。</p>
       <p>这也解释了为什么同一套相机与图传，换了飞控配置后，屏幕内容可能完全不同。ZYRO C403 Max 产品资料标注支持 Betaflight / INAV OSD；具体能显示哪些字段，仍取决于飞控、传感器、接线和设置是否实际可用。</p>
 
-      <figure className="article-product"><img src={sitePath("/products/fpv-osd-data-path.png")} alt="FPV OSD 科普图：电池、电流传感器、GPS 和无线链路的数据汇入飞控，再叠加到相机实时画面显示器上" /><figcaption>OSD 的概念路径：电池、电流、定位和链路等数据进入飞控；飞控把可用信息叠加到相机视频中，再由图传与显示端呈现。橙色表示供电相关路径，蓝色表示数据与视频路径；图为原创建意图，并非具体设备接线图。</figcaption></figure>
+      <figure className="article-product"><img src={sitePath("/products/fpv-osd-data-path.png")} alt="FPV OSD 四步科普图：数据来源进入飞控，生成 OSD 叠加层，再显示在 FPV 画面上" /><figcaption>从左到右的四步路径：①电池、电流、定位与链路提供数据；②飞控汇集可用数据；③生成电压、容量、模式、返航和信号等 OSD 叠加层；④叠加层显示在 FPV 视频画面上。橙色箭头表示供电相关路径，蓝色箭头表示数据与视频路径；图为原创建意图，并非具体设备接线图。</figcaption></figure>
 
       <h2>四类最值得先看的信息</h2>
       <div className="comparison-grid">
