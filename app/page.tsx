@@ -124,6 +124,14 @@ const products = [
 
 const articles = [
   {
+    tag: "成像基础",
+    date: "本周更新",
+    title: "快速横移时画面为什么会倾斜？读懂滚动快门",
+    excerpt: "从逐行曝光、相对运动到画面倾斜，理解 FPV 动态画面为何会出现时序形变，以及怎样减少影响。",
+    read: "6 分钟阅读",
+    href: "/articles/rolling-shutter",
+  },
+  {
     tag: "飞行信息",
     date: "本周更新",
     title: "FPV 画面上的字到底从哪来？OSD 不是装饰",

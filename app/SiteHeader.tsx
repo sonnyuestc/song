@@ -35,6 +35,7 @@ const navGroups: NavGroup[] = [
     label: "知识库",
     href: "/#knowledge",
     items: [
+      { label: "快速运动与滚动快门", href: "/articles/rolling-shutter" },
       { label: "FPV OSD 飞行信息", href: "/articles/fpv-osd-basics" },
       { label: "广角 FOV 与镜头畸变", href: "/articles/fov-and-distortion" },
       { label: "菲涅尔区与路径净空", href: "/articles/fresnel-zone" },
