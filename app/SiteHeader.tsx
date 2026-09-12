@@ -10,11 +10,18 @@ type NavGroup = {
 };
 
 const navGroups: NavGroup[] = [
+  { label: "Wiki", href: "/wiki/", items: [
+    { label: "文档目录", href: "/wiki/" },
+    { label: "实测案例", href: "/wiki/#cases" },
+    { label: "开源社区", href: "/wiki/pixelpilot/" },
+    { label: "开箱与实测视频", href: "/wiki/videos/" },
+  ] },
   {
     label: "产品",
     href: "/#products",
     items: [
       { label: "全部产品", href: "/#all-products" },
+      { label: "PocketLink · 规划产品", href: "/products/pocket/" },
       { label: "数字高清图传", href: "/?category=数字图传#products" },
       { label: "模拟 FPV", href: "/?category=模拟图传#products" },
       { label: "Mesh 与数据链路", href: "/?category=网络通信#products" },

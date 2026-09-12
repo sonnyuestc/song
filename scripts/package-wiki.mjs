@@ -28,6 +28,7 @@ const { default: worker } = await import(workerUrl.href);
 const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
 const context = { waitUntil() {}, passThroughOnException() {} };
 const routes = [
+  ...["wiki", "wiki/7020-100km", "wiki/7020-277km", "wiki/7030-277km", "wiki/fz7020-40km", "wiki/dayawan-20km", "wiki/mesh-shenzhen-zhongshan", "wiki/pixelpilot", "wiki/videos", "products/pocket"].map(route => [`${basePath}/${route}/`, `${route}/index.html`]),
   [`${basePath}/`, "index.html"],
   [`${basePath}/articles/rolling-shutter/`, "articles/rolling-shutter/index.html"],
   [`${basePath}/articles/fpv-osd-basics/`, "articles/fpv-osd-basics/index.html"],
