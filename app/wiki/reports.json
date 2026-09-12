@@ -1,0 +1,343 @@
+[
+  {
+    "slug": "7020-100km",
+    "title": "7020 系列 100 km 图传拉距测试",
+    "filename": "100公里7020-XX图传拉距测试.pdf",
+    "pdf": "/wiki/originals/100公里7020-XX图传拉距测试.pdf",
+    "sha256": "7460733e392694e3b7b145901ba2ba8832a01c1e7c9530017e1cc72997b54e1d",
+    "pages": [
+      {
+        "number": 1,
+        "image": "/wiki/reports/7020-100km/page-1.png",
+        "width": 1415,
+        "height": 2000,
+        "text": "测试名称：100 公里图传拉距测试 \n测试时间：2025 年10 月27 日 \n测试地点：百丈千亩杜鹃花基地、尖山观音寺 \n \n  \n测试方法：百丈千亩杜鹃花基地放置模块， 尖山观音寺放置模块， 网线接电脑； 网线接电脑。\n建链后，模块之间互相灌包，测试实时带宽。 \n测试模块： \n1、7020-30-1400： 双发双收双向图传， 最大发射功率2*30dBm， 中心频点1400MHz，最\n大支持20MHz 带宽，单向最大47mbps 码率，支持2 跳4 节点MESH 组网，推荐使用范围30-\n50KM。模块见下图左边所示。 \n2、7020-40-1400： 双发双收双向图传， 最大发射功率2*40dBm， 中心频点1400Mhz。最\n大支持20MHz 带宽， 单向最大47mbps 码率， 支持2 跳4 节点MESH 组网， 推荐使用范围100-\n200KM。模块见下图右边所示。 \n3、详细参数参考规格书参考。 \n"
+      },
+      {
+        "number": 2,
+        "image": "/wiki/reports/7020-100km/page-2.png",
+        "width": 1415,
+        "height": 2000,
+        "text": " \n测试场景1 测试频点1400MHz，发射功率2*40dBm，带宽20MHz。两边分别接2dbi、\n5dbi 天线测试码流。 \n测试场景2 测试频点1400MHz，发射功率2*30dBm，带宽 20MHz。两边分别接2dbi、\n5dbi 天线测试码流。 \n  \n \n"
+      },
+      {
+        "number": 3,
+        "image": "/wiki/reports/7020-100km/page-3.png",
+        "width": 1415,
+        "height": 2000,
+        "text": "   \n \n测试数据汇总: \n注释：30dBm 模块发射功率强推到32dBm。双发，即单发的32+3=35dBm \n \n具体测试数据见下部分： \n用泰克便携式频谱扫描1.4G 频谱如下图所示，1350-1450 带内有强信号的干扰信号。 \n \n \n图传软件自带频谱扫描如下图，也显示 1.4G 高频部分干扰比较大。 \n频率\n（mhz\n） \n距离\n（km） \n空中衰减 \n（dB） \n发射功率 \n(dBm) \n接收灵敏度 \n（dBm） \n尖山天线 \n（dBi） \n百丈天线 \n（dBi） \n百丈 SNR \n(dB) \n灌包速\n率 \n（Mbps\n） \n1400 100 135.3625607 35 -96 2 5 -2.0/ 3 \n1400 100 135.3625607 35 -96 5 5 3.6/ 6.6 \n1400 100 135.3625607 43 -96 2 5 6/6.3 14.6 \n1400 100 135.3625607 43 -96 5 5 8.9/9.3 19.4 "
+      },
+      {
+        "number": 4,
+        "image": "/wiki/reports/7020-100km/page-4.png",
+        "width": 1415,
+        "height": 2000,
+        "text": " \n \n"
+      },
+      {
+        "number": 5,
+        "image": "/wiki/reports/7020-100km/page-5.png",
+        "width": 1415,
+        "height": 2000,
+        "text": "2dBi+5dBi 天线1W 模块链路实时信息及灌包见下图。 \n \n5dBi+5dBi 天线1W 模块链路实时信息及灌包见下图。 \n \n"
+      },
+      {
+        "number": 6,
+        "image": "/wiki/reports/7020-100km/page-6.png",
+        "width": 1415,
+        "height": 2000,
+        "text": "2dBi+5dBi 天线10W 模块链路实时信息及灌包见下图 \n \n  \n5dBi+5dBi 天线10W 模块链路实时信息及灌包见下图 \n  \n"
+      }
+    ]
+  },
+  {
+    "slug": "7020-277km",
+    "title": "7020 20 MHz 277 km 图传拉距测试",
+    "filename": "277公里7020-20MHz图传拉距测试.pdf",
+    "pdf": "/wiki/originals/277公里7020-20MHz图传拉距测试.pdf",
+    "sha256": "694cd23146020f9090c76a1f8bd17de045fbe3b4e1e004f66410b64b4c3415f0",
+    "pages": [
+      {
+        "number": 1,
+        "image": "/wiki/reports/7020-277km/page-1.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "测试名称：300 公里双向图传拉距测试 \n测试时间：2023 年12 月14 日 \n测试地点：五股尖（海拔1618 米）到江西九岭尖（海拔1794 米），如下图所示距离为277KM。 \n \n    \n测试方法：五股尖九岭尖两地各放置模块，模块接电脑相互灌包测试实时带宽。 \n测试模块型号： \n1、7020-46-1400：双发发双收双向图传，最大发射功率46dBm（支持强推到47dBm），中心频点1400MHz，最\n大支持20MHz 带宽，单向最大47mbps 码率，支持MESH 组网，最远支持500KM。 \n测试数据汇总: \n7020-46-1400 \n带宽\n（MHz） \n频率\n（MHz） \n距离 \n（km） \n空中衰\n减\n（dB） \n发射功\n率\n（dBm） \n噪底\n(dBm) \n天线增\n益 \n（dBi） \n天线增\n益 \n（dBi） \nSNR \n（dB） \n五SNR \n(dB) \n九SNR \n(dB) \n五-九 \n（mbps） \n九-五\n（mbps） \n20 1400 277 144.2 50 -96 5 5 11.8 13 13 11.8 11.8 \n注释：46dBm 模块发射功率强推到 47dBm, 双发47dBm，即等效于单发 47+3=50dBm 。 \n \n"
+      },
+      {
+        "number": 2,
+        "image": "/wiki/reports/7020-277km/page-2.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "具体测试数据见下部分： \n测试地点偏僻扫描： \n用泰克便携式频谱扫描九岭尖1.4G 频谱如下图所示，1350-1450 带内很干净。 \n \n \n测试设备的参数设置： \n固定频率1.4G，带宽20MHz，详细设置如下图所示： \n \n"
+      },
+      {
+        "number": 3,
+        "image": "/wiki/reports/7020-277km/page-3.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "两地相互灌包数据： \n五股尖往九岭尖灌包如下图所示： \n \n \n九岭尖往五股尖灌包如下图所示： \n \n \n \n \n \n"
+      }
+    ]
+  },
+  {
+    "slug": "dayawan-20km",
+    "title": "大亚湾约 20 km 图传测试（英文报告）",
+    "filename": "202605_Daya_Bay_20km_Test_Report_with_On-Site_Stream_Video_EN.pdf",
+    "pdf": "/wiki/originals/202605_Daya_Bay_20km_Test_Report_with_On-Site_Stream_Video_EN.pdf",
+    "sha256": "2939fe54c59dac4555b6f99229c8b05e3d6143b13316ab13fd1322b9536560a5",
+    "pages": [
+      {
+        "number": 1,
+        "image": "/wiki/reports/dayawan-20km/page-1.png",
+        "width": 1415,
+        "height": 2000,
+        "text": "0.5 W Daya Bay Test Report \n1. Huizhou Daya Bay Video Link Range Test \n1.1 Test Objective \nTo evaluate the 20 km video transmission performance of the in- house-\ndeveloped system in an air-to-ground scenario along the Daya Bay coastline. \n1.2 Test Environment \nTest date: May 14, 2026 \nTest scenario: The test was conducted along the Huizhou Daya Bay coastline. \nThe UAV was flown at an altitude of 80 m at one end of the link, while the ground \nstation at the other end was mounted on a 1.8 m tripod. The target link distance \nwas 20 km. \nHardware: Four sets of in-house-developed 0.5 W equipment (two sets at each \nend: one test unit and one backup unit), two test laptops, six antennas, and one \nUAV test platform. \nSoftware: iPerf traffic -generation software, CRTdebug diagnostic software, \nand VLC media player. \n1.3 Test Results \nTest locations: \nUAV takeoff site: Wushantou Greenway Observation Deck, Huiyang District, \nHuizhou, Guangdong Province \nGround-side video receiving site: Bijia Lover's Bay, Huidong County \nMeasured distance between the two sites: 19.6 km "
+      },
+      {
+        "number": 2,
+        "image": "/wiki/reports/dayawan-20km/page-2.png",
+        "width": 1415,
+        "height": 2000,
+        "text": " \nSatellite Map - Amap \n                \nGround Station                                      UAV  \n"
+      },
+      {
+        "number": 3,
+        "image": "/wiki/reports/dayawan-20km/page-3.png",
+        "width": 1415,
+        "height": 2000,
+        "text": " \nVideo Stream and Link Information \n20km处无人机盘旋视频.mp4\n \n"
+      }
+    ]
+  },
+  {
+    "slug": "mesh-shenzhen-zhongshan",
+    "title": "深圳—中山跨海 MESH 测试",
+    "filename": "20260807MESH深圳对中山测试情况记录.pdf",
+    "pdf": "/wiki/originals/20260807MESH深圳对中山测试情况记录.pdf",
+    "sha256": "20ccc1eee7c59e87cdc9063fc6a36703161cb22934a1b390aee9cab18ecbeaf6",
+    "pages": [
+      {
+        "number": 1,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-1.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "20260807 货架产品深圳对中山测试情况记录 \n1、8 月 7 日深圳到中山空地场景隔海测试 \n1.1 测试目的 \n基于空对地场景，测试 30 公里海面场景图传能力。                                                      \n1.2 测试环境 \n测试时间：2026-08-07 \n测试场景：一边节点 1 无人机升空 4m，同时节点 2 地面用三角架高 1.6m，采用\n全向以及定向天线测试 28 公里的图传通信能力，无人机端位于中山市翠亨新区\n南朗街道环岛路附近，节点 3 接收端位于深圳市南山区蛇口赤湾左炮台路， 海拔\n120 米左右，两地点隔海 28 公里左右，无遮挡。 \n硬件设备：自研货架 3 套（无人机端 2 套（一套飞无人机测试，一套位于地面端\n监测），图传地面接收端 1 套） ，调试机2 台，天线 6 根（4 根 1.4G 全向天线\n（4dBi），2 根定向天线（14dBi）），测试无人机一套。 \n相关软件：谷歌上网浏览器，VLC 视频软件 \n1.3 测试过程 \n（1）先用全向 1.4G 天线测试图传性能， 同时无人机端地面架一辆设备用于\n监测无人机处的电台情况，再用定向高增益天线重复该测试流程。 \n \n1.4 测试结果 \n1）测试场景： \n定点处：中山市翠亨新区南朗街道环岛路附近 \n动点处：深圳市南山区蛇口赤湾左炮台附近 "
+      },
+      {
+        "number": 2,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-2.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "两点距离：28.6KM（某地图软件测距功能） \n \n \n1、全向 1.4G 天线(5dBi)现场测试图如下： \n  \n中山无人机地面监测端 \n"
+      },
+      {
+        "number": 3,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-3.png",
+        "width": 1414,
+        "height": 2000,
+        "text": " \n无人机端图传设备 \n \n \n无人机飞置与地面监测电台一致高度处 \n"
+      },
+      {
+        "number": 4,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-4.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "   \n深圳左炮台地面接收端 \n    \n深圳左炮台地面接收图传设备 \n接收端全向天线链路质量截图如下： \n"
+      },
+      {
+        "number": 5,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-5.png",
+        "width": 1414,
+        "height": 2000,
+        "text": " \n频点 1370，发射功率 27dBm，链路距离 28.3 公里，信号 SNR：7-9。 \n三节点 2 跳视频截图如下： \n \n备注：无人机放置在地面端，链状拓扑，2 跳进行图传播放，视频流畅清晰，视\n频素材另放视频文件夹中。 \n"
+      },
+      {
+        "number": 6,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-6.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "三节点单跳视频截图如下： \n \n备注： 无人机起飞至与监测电台一致的低空高度， 三节点全联通， 单跳进行图传\n播放（链路 snr：4-5db） ，视频流畅清晰，视频素材另放视频文件夹中。 \n2、深圳炮台处接收端换定向 1.4G 天线（14dBi） \n接收端现场更换全向天线测试图如下： \n \n地面接收端定向天线测试场景 \n"
+      },
+      {
+        "number": 7,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-7.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "接收端定向天线链路质量截图如下： \n \n中山至深圳更换定向天线后两节点链路质量  \n备注：频点 1370，发射功率 27dBm，链路距离 28.3 公里，信号 SNR：12-16。 \n2 节点单跳视频如下： （空中无人机对炮台地面接收） \n \n地面接收端天线一根采用定向天线 \n"
+      },
+      {
+        "number": 8,
+        "image": "/wiki/reports/mesh-shenzhen-zhongshan/page-8.png",
+        "width": 1414,
+        "height": 2000,
+        "text": "备注： 地面接收端两天线一个接定向天线一个接全向天线， 无人机发射端升空高\n度为 4-10m， 此时地面接收端两天线接收信噪比差10db 左右， 与天线增益对齐，\n此时视频流畅稳定，视频素材另放视频文件夹中。 \n三节点全联通视频拉流如图所示： \n \n备注： 地面接收端两天线一个接定向天线一个接全向天线， 无人机发射端升空高\n度为 4-10m，无人机端地面监测平台入网，此时深圳地面接收端与无人机端链路\n质量与之前两节点一致， 深圳地面接收端与中山地面检测端链路质量差距为定向\n天线与全向天线的差异 （60.10>>60.14：SNR12，60.14>>60.10：SNR6， ） ， 此时\n视频流畅稳定，视频素材另放视频文件夹中。 \n"
+      }
+    ]
+  },
+  {
+    "slug": "fz7020-40km",
+    "title": "FZ7020-27 40 km 图传测试（英文报告）",
+    "filename": "FZ7020-27_40km_Video_Link_Test_Report_EN.pdf",
+    "pdf": "/wiki/originals/FZ7020-27_40km_Video_Link_Test_Report_EN.pdf",
+    "sha256": "7ebefc9fff50932861fc00fbde7f110c85f838f6fb705866318b505add6447ff",
+    "pages": [
+      {
+        "number": 1,
+        "image": "/wiki/reports/fz7020-40km/page-1.png",
+        "width": 1415,
+        "height": 2000,
+        "text": "Test Name: 40 km Video-Link Range Test Using Two 0.5 W Units \nTest Date: December 23, 2025 \nTest Locations: Wangweishan Mountain and Majiawu Viewing Platform \nTest Method: One module was installed at the summit of Wangweishan Mountain and \nconnected to a computer via Ethernet. The other module was installed at Majiawu \nViewing Platform and connected to another computer via Ethernet. After the link was \nestablished, bidirectional UDP traffic was generated between the two modules to \nmeasure real-time throughput. \n \nSpectrum of the Test Environment: \n \n \nWangweishan Mountain elevation: 700 m; Majiawu Viewing Platform elevation: 200 m \nTest Configuration: Center frequency: 1360 MHz; transmit power: 800 mW; bandwidth: 20 \nMHz. A 2 dBi antenna was used at Wangweishan Mountain and a 5 dBi antenna at Majiawu \nViewing Platform for the throughput test. \n"
+      },
+      {
+        "number": 2,
+        "image": "/wiki/reports/fz7020-40km/page-2.png",
+        "width": 1415,
+        "height": 2000,
+        "text": " \n \nTest Results: \nIntelligent \nFrequency \nSelection \nMode \nWangweishan (2 \ndBi Antenna) \nMajiawu (5 dBi \nAntenna) \nMajiawu-to-\nWangweishan \nRate \nWangweishan-\nto-Majiawu \nRate \nOutput Power SNR SNR   \n29 dBm (20 \nMHz) -0.3/3.2 2.8/2.8 5.3 Mbps 5.3 Mbps \n29 dBm (10 \nMHz) 5.4 1.7 5.6 Mbps 5.6 Mbps \n \nWangweishan Mountain - 20 MHz Bandwidth \n \nWangweishan Mountain - 10 MHz Bandwidth \n"
+      },
+      {
+        "number": 3,
+        "image": "/wiki/reports/fz7020-40km/page-3.png",
+        "width": 1415,
+        "height": 2000,
+        "text": " \n \n \n"
+      }
+    ]
+  },
+  {
+    "slug": "zyro-link-58ghz",
+    "title": "ZYRO Link 5.8 GHz 远距离客户验证报告 V2.0",
+    "filename": "ZYRO_link_5.8GHz_Long_Range_Customer_Validation_Report_V2.0.pdf",
+    "pdf": "/wiki/originals/ZYRO_link_5.8GHz_Long_Range_Customer_Validation_Report_V2.0.pdf",
+    "sha256": "856f5ed77a873fbcb313bd631bb03687bfb50beff93b625501f2690bb4aa286b",
+    "pages": [
+      {
+        "number": 1,
+        "image": "/wiki/reports/zyro-link-58ghz/page-01.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 1 \nZYRO \nLONG-RANGE VIDEO TRANSMISSION \n5.8 GHz FIELD VALIDATION REPORT \n \nDocument version V2.0 - Customer Edition \nTest date 21 July 2026 \nFirmware fw-20260717-4uu8.bin \nPrepared for Customer technical evaluation \n  \n"
+      },
+      {
+        "number": 2,
+        "image": "/wiki/reports/zyro-link-58ghz/page-02.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 2 \n00 DOCUMENT CONTROL \nStatus, scope and source basis \n \nDocument item Details \nDocument title ZYRO 5.8 GHz Long-Range Video Transmission Field Validation Report \nDocument ID ZYRO-TR-5G8-20260721-V2.0 \nVersion V2.0 - Customer Edition \nTest date 21 July 2026 \nSource basis Original three-page field test record plus two runtime screenshots supplied with this \nreport \nProduct designation 5.8 GHz wireless video transmission system; specific commercial model not stated in the \nsource record \n \nExecutive summary \nMAXIMUM TESTED DISTANCE \n9.78 km \nOpen-path field test \nDIRECTIONAL ANTENNA \n512 / 1024 kbps \nSmooth at both rates \nOMNI ANTENNA \n512 kbps \nSmooth at 9.78 km \nOBSERVED LIMITATION \n1024 kbps \nMinor stuttering with omni  \n \nThe supplied field record documents successful video transmission at 3.86 km and 9.78 km. At 9.78 km, the directional-\nantenna configuration was reported smooth at both 512 kbps and 1024 kbps. The omni-antenna configuration was reported \nsmooth at 512 kbps and showed minor stuttering at 1024 kbps. \nData integrity note: This customer edition reorganizes and explains the supplied evidence. It does not replace missing \ncontinuous RF logs, packet-loss records, weather data, GPS coordinates or calibrated antenna-gain measurements. \nContents \n• 01  Test objective and scope  \n• 02  System under test  \n• 03  Test configuration \n• 04  Test routes and environment  \n• 05  Test 1 - 3.86 km \n• 06  Test 2 - 9.78 km \n• 07  Runtime evidence  \n• 08  Engineering interpretation  \n• 09  Conclusion and recommendations  \n• Appendix A  Referenced media  \n• Appendix B  Original source report  \n  "
+      },
+      {
+        "number": 3,
+        "image": "/wiki/reports/zyro-link-58ghz/page-03.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 3 \n01 TEST OBJECTIVE AND SCOPE  \nWhat was evaluated and what was not recorded \n \nObjective \nEvaluate the practical long-range video transmission performance of the supplied 5.8 GHz wireless link at two field \ndistances and compare directional and omni antenna behavior at the longer route. \nEvaluation points \n• Link establishment and end -to-end video availability at 3.86 km and 9.78 km.  \n• Observed video smoothness under the tested antenna and bitrate combinations.  \n• Instantaneous runtime indicators captured from the device web interface.  \n• Suitability of directional versus omni antennas for the tested long -range use case. \nScope boundaries \nScope item Report treatment \nRecorded in source Test date, firmware, main radio settings, endpoint locations, installation height, route \ndistance, antenna type, selected video bitrates and qualitative video result. \nNot recorded \nWeather, wind, humidity, exact GPS coordinates, antenna gain, cable loss, EIRP \nverification, continuous RSSI/SNR logs, packet-loss percentage, throughput benchmark \nand Fresnel-zone survey. \nInterpretation rule Engineering comments in Section 08 are identified as interpretation and are kept \nseparate from the source-derived test results. \n \nPath condition: The photographs and maps show open outdoor paths. A formal line-of-sight and Fresnel-clearance survey \nwas not included in the source package; therefore this report uses the term “open-path field test” rather than claiming \nverified Fresnel clearance. \n  "
+      },
+      {
+        "number": 4,
+        "image": "/wiki/reports/zyro-link-58ghz/page-04.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 4 \n02 SYSTEM UNDER TEST \nAP, STA, camera and antenna arrangement \n \n \nAP-side module and antenna connections \n \nSTA-side module, camera and omni antennas \n \nElement Source-supported description  \nAP side Wireless module configured as AP. The source photos show both omni and directional \nantenna options. \nSTA side Wireless module configured as STA and connected to a camera. The source photos \nshow dual omni antennas. \nVideo interface evidence The supplied runtime screenshots show an ONVIF/ODM interface reporting H.264 at \n1920 ×  1080. \nAntenna comparison The 9.78 km route compares a directional antenna with an omni antenna under 512 kbps \nand 1024 kbps video settings. \n \nThe specific camera model, antenna gain, cable type and commercial product model are not stated in the source report. \n  \n"
+      },
+      {
+        "number": 5,
+        "image": "/wiki/reports/zyro-link-58ghz/page-05.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 5 \n03 TEST CONFIGURATION \nRadio and firmware settings recorded in the source \n \n \nAP radio module  \nSTA radio module \n \nParameter Recorded value \nFirmware fw-20260717-4uu8.bin \nSSID shown in configuration screen ZMESH_LINK \nOperating band 5.8 GHz \nChannel setting 36 \nBandwidth 20 MHz \nMCS MCS0 \nPower setting 31.5 dBm / 3150 mBm - “Use professional antenna” shown in the UI \nBaud rate 115200 \n \n  \n"
+      },
+      {
+        "number": 6,
+        "image": "/wiki/reports/zyro-link-58ghz/page-06.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 6 \n03A CONFIGURATION INTERFACE  \nOriginal configuration screen retained as source evidence \n \n \nFigure 3-1. Configuration interface captured in the original source report \nTerminology note: The source interface labels the value “36” under Frequency and “5.8G” under Channel. For technical \nreadability, this report presents them as channel 36 and the 5.8 GHz operating band. \n  \n"
+      },
+      {
+        "number": 7,
+        "image": "/wiki/reports/zyro-link-58ghz/page-07.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 7 \n04 \nTEST ROUTES AND \nENVIRONMENT \nField locations documented in the source report \n \n \nRoute 1: Shuiyue Bridge to Tiande Temple - 3.86 km \n \nRoute 2: Nanliao Fishing Port to Potou Fishing Port - 9.78 km \n \nRoute item Recorded information  \nRoute 1 AP at Shuiyue Bridge (水月橋); STA at Tiande Temple (天德堂); distance 3.86 km. \nRoute 2 AP at Nanliao Fishing Port (南寮漁港); STA at Potou Fishing Port (坡頭漁港); distance \n9.78 km. \nTerrain evidence Route 1 combines a low-elevation bridge site with a higher temple site. Route 2 follows \nan open coastal path. \nEnvironmental records Weather, wind, humidity and spectrum occupancy were not recorded in the supplied \nreport. \n \n  \n"
+      },
+      {
+        "number": 8,
+        "image": "/wiki/reports/zyro-link-58ghz/page-08.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 8 \n05 TEST 1 - 3.86 KM \nAP at Shuiyue Bridge; STA at Tiande Temple \n \n \nAP installation at Shuiyue Bridge \n \nSTA installation at Tiande Temple \n \nDISTANCE \n3.86 km \nMap measurement in source  \nAP INSTALLATION \n~1.5 m \nSite elevation ~8 m \nSTA INSTALLATION \n~1.5 m \nSite elevation ~85 m \nOBSERVED RESULT \nSmooth \nVideo reported fluent \n \nTest item Recorded value \nAP antenna Directional antenna \nSTA antenna Omni antenna \nVideo bitrate Not stated in the source result section \nVideo result 影像流暢 / smooth video \nReferenced evidence video Video_260721155939T TX 天德堂&RX 水月橋上.mp4 \n \nResult statement: The source report records smooth video for this 3.86 km setup. No continuous latency, RSSI, SNR or \npacket-loss statistics were included for this route. \n  \n"
+      },
+      {
+        "number": 9,
+        "image": "/wiki/reports/zyro-link-58ghz/page-09.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 9 \n06 TEST 2 - 9.78 KM \nDirectional versus omni antenna comparison \n \n \nAP installation at Nanliao Fishing Port \n \nSTA installation at Potou Fishing Port \n \n \nDirectional antenna used for the long-range comparison \n \nOmni antenna arrangement shown in the source setup \n \nDISTANCE \n9.78 km \nCoastal open-path route \nDIRECTIONAL / 512 \nSmooth \nSource-reported result \nDIRECTIONAL / 1024 \nSmooth \nSource-reported result \nOMNI / 1024 \nMinor stutter \nSource-reported result \n \n  \n"
+      },
+      {
+        "number": 10,
+        "image": "/wiki/reports/zyro-link-58ghz/page-10.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 10 \n06A RESULT MATRIX \nAll test outcomes consolidated from the source record \n \nTest route Distance Antenna configuration Video bitrate Observed result \nShuiyue Bridge → Tiande \nTemple \n3.86 km AP directional / STA omni Not stated in source report Smooth video \nNanliao Fishing Port → Potou \nFishing Port \n9.78 km Directional antenna 512 kbps Smooth video \nNanliao Fishing Port → Potou \nFishing Port \n9.78 km Directional antenna 1024 kbps Smooth video \nNanliao Fishing Port → Potou \nFishing Port \n9.78 km Omni antenna 512 kbps Smooth video \nNanliao Fishing Port → Potou \nFishing Port \n9.78 km Omni antenna 1024 kbps Minor stuttering \n \nLong-route comparison \nComparison item Result \nDirectional antenna Both 512 kbps and 1024 kbps were reported smooth at 9.78 km. \nOmni antenna 512 kbps was reported smooth; 1024 kbps showed minor stuttering. \nReferenced directional video Video_260721162958 指向天線 TX 坡頭&RX 南寮.mp4 \nReferenced omni video Video_260721164457 圓頭 ANTTX 坡頭&RX 南寮.mp4 \n \nNo quantitative acceptance threshold was supplied. Accordingly, this report presents the observations without assigning a \nformal pass/fail certification. \n  "
+      },
+      {
+        "number": 11,
+        "image": "/wiki/reports/zyro-link-58ghz/page-11.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 11 \n07 RUNTIME EVIDENCE \nInstantaneous device status and ping captures \n \n \nFigure 7-1. Runtime screenshot A supplied with the test package \nVisible indicator Captured value \nVisible video reference The media-player title includes the 9.78 km omni-antenna test video filename. \nDisplayed device address 192.168.10.21 \nRuntime TX / RX 1.2 Mbps / 283 Kbps \nAntenna signal -94 dBm \nLink quality 12% \nSNR N/A \nVisible ping samples Approximately 5 ms to 206 ms in the captured window; no timeout is visible in the \nscreenshot. \n \nThe values above are instantaneous UI readings, not a continuous measurement log. TX/RX counters are presented from \nthe perspective of the displayed device and should not be treated as an application-layer throughput benchmark without \nconfirming device role and counter definition. \n  \n"
+      },
+      {
+        "number": 12,
+        "image": "/wiki/reports/zyro-link-58ghz/page-12.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 12 \n07A \nRUNTIME EVIDENCE - SECOND \nCAPTURE \nHigher signal and SNR state shown in the supplied evidence \n \n \nFigure 7-2. Runtime screenshot B supplied with the test package \nVisible indicator Captured value \nDisplayed device address 192.168.10.20 \nRuntime TX / RX 400 Kbps / 1.1 Mbps \nAntenna signal -79 dBm \nLink quality 33% \nSNR 14 dB \nVisible ping samples Approximately 5 ms to 60 ms in the captured window; no timeout is visible in the \nscreenshot. \nVideo interface H.264, 1920 ×  1080 shown in the ODM interface \n \nCompared with Figure 7-1, this capture shows a materially stronger signal and lower visible latency variation. The source \npackage does not provide synchronized timestamps or a continuous log, so the screenshots should be treated as \nrepresentative states rather than a controlled statistical comparison. \n  \n"
+      },
+      {
+        "number": 13,
+        "image": "/wiki/reports/zyro-link-58ghz/page-13.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 13 \n08 ENGINEERING INTERPRETATION  \nClearly separated from the source-derived observations \n \nInterpretation of the 9.78 km results \n• The directional antenna result indicates that additional antenna gain and focused energy materially improve the link margin a t \nthe longest tested distance.  \n• The omni antenna remaining smooth at 512 kbps but showing minor stuttering at 1024 kbps is consistent with a reduced fade \nmargin: a higher application bitrate leaves less tolerance for retransmissions and latency variation.  \n• The -94 dBm / 12% screenshot represents a weak -link state. The visible ping variation up to approximately 206 ms is \nconsistent with retransmissions, queueing or temporary channel degradation, but the screenshot alone cannot identify the \nexact cause. \n• The -79 dBm / 14 dB SNR screenshot represents a stronger state and shows a narrower visible ping range. This supports the \npractical value of better alignment, antenna gain and path clearance.  \nCustomer deployment guidance \nUse case Recommendation \nFor maximum stability at ~10 km Use the directional antenna, verify alignment at both ends and keep the video bitrate at \nor below the validated 1024 kbps setting. \nWhen omni coverage is required Use 512 kbps as the source-supported stable setting at 9.78 km; validate 1024 kbps at \nthe final installation before release. \nInstallation Increase antenna height where practical, minimize cable loss and maintain clear \npolarization/orientation. \nFuture validation Record continuous RSSI/SNR, packet loss, ping statistics, UDP/TCP throughput, \nweather, GPS coordinates, antenna gain and spectrum occupancy. \n \nThese recommendations are engineering inferences based on the supplied observations and should be revalidated for \ndifferent hardware revisions, antennas, regulatory power limits, terrain and interference conditions. \n  "
+      },
+      {
+        "number": 14,
+        "image": "/wiki/reports/zyro-link-58ghz/page-14.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 14 \n09 \nCONCLUSION AND \nRECOMMENDATIONS \nCustomer-facing outcome statement \n \n3.86 KM \nSmooth \nDirectional AP / omni STA  \n9.78 KM DIRECTIONAL \nSmooth \n512 and 1024 kbps \n9.78 KM OMNI \nSmooth at 512 \nMinor stutter at 1024 \n \nConclusion: The supplied evidence demonstrates practical long-range operation of the 5.8 GHz video transmission system \nat 3.86 km and 9.78 km under the documented field configurations. The directional antenna provided the strongest long-\nrange result, maintaining smooth video at both 512 kbps and 1024 kbps over 9.78 km. The omni configuration remained \nsmooth at 512 kbps and showed minor stuttering at 1024 kbps over the same route. \nRecommended customer configuration: For deployments approaching 10 km, use the directional antenna and a validated \nvideo bitrate of 512-1024 kbps. Where omni coverage is required, 512 kbps is the source-supported stable setting at the \ntested distance. \nQualification statement: These results apply to the tested firmware, radio settings, antenna arrangements and field \nconditions. They are not a guarantee of identical performance in other interference, terrain, weather or regulatory \nenvironments. \nRecommended next test package \n• 10 km repeat test with synchronized continuous RSSI, SNR, ping and packet -loss logging. \n• UDP throughput and application video bitrate captured simultaneously.  \n• Directional antenna gain, cable loss and verified EIRP documented.  \n• Photographs of antenna orientation and measured installation heights at both endpoints.  \n• Weather, wind, spectrum scan and exact coordinates recorded in the test sheet.  \n  "
+      },
+      {
+        "number": 15,
+        "image": "/wiki/reports/zyro-link-58ghz/page-15.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 15 \nA \nAPPENDIX A - REFERENCED \nMEDIA \nFiles named in the original source report \n \nMedia item Reference \n3.86 km video Video_260721155939T TX 天德堂&RX 水月橋上.mp4 \n9.78 km directional video Video_260721162958 指向天線 TX 坡頭&RX 南寮.mp4 \n9.78 km omni video Video_260721164457 圓頭 ANTTX 坡頭&RX 南寮.mp4 \nRuntime screenshot A Media-player title references the 9.78 km omni-antenna video. \nRuntime screenshot B Device and ONVIF runtime status capture. \n \nThe three video files are referenced by name in the source report but were not embedded in the supplied PDF. This Word \ndocument includes the two runtime screenshots provided in the conversation. \n \nShuiyue Bridge map detail \n \nTiande Temple map detail \n \n \nNanliao Fishing Port map detail  \nPotou Fishing Port map detail \n \n  \n"
+      },
+      {
+        "number": 16,
+        "image": "/wiki/reports/zyro-link-58ghz/page-16.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 16 \nB1 \nAPPENDIX B - ORIGINAL SOURCE \nPAGE \nOriginal field test record, page 1 of 3 \n \n \nOriginal source report - page 1 \n  \n"
+      },
+      {
+        "number": 17,
+        "image": "/wiki/reports/zyro-link-58ghz/page-17.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 17 \nB2 \nAPPENDIX B - ORIGINAL SOURCE \nPAGE \nOriginal field test record, page 2 of 3 \n \n \nOriginal source report - page 2 \n  \n"
+      },
+      {
+        "number": 18,
+        "image": "/wiki/reports/zyro-link-58ghz/page-18.png",
+        "width": 1546,
+        "height": 2000,
+        "text": " \nZYRO 5.8 GHz LONG-RANGE VIDEO TRANSMISSION | CUSTOMER EDITION \n \nDocument ID: ZYRO-TR-5G8-20260721-V2.0 Page 18 \nB3 \nAPPENDIX B - ORIGINAL SOURCE \nPAGE \nOriginal field test record, page 3 of 3 \n \n \nOriginal source report - page 3 \n"
+      }
+    ]
+  }
+]
