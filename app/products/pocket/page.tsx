@@ -4,8 +4,8 @@ import { sitePath } from "../../site-path";
 import styles from "./pocket.module.css";
 
 export const metadata: Metadata = {
-  title: "ZYRO PocketLink｜规划产品",
-  description: "PocketLink 规划产品：口袋相机与运动相机远端监看方向。最终规格、价格与上市时间尚未确定。",
+  title: "ZYRO PocketLink｜未来产品",
+  description: "PocketLink 未来产品：口袋相机与运动相机远端监看方向。最终规格、价格与上市时间尚未确定。",
 };
 
 const sourceImage = "/products/pocketlink-overview.png";
@@ -41,7 +41,7 @@ export default function PocketLinkPage() {
       <div><a href="#features">产品亮点</a><a href="#versions">规划版本</a><a href="#specs">规划参数</a><a href="#contact" className={styles.navCta}>咨询产品 ↗</a></div>
     </nav>
 
-    <div style={{padding:"28px 6%",background:"#e0f1fb",color:"#143e5c",lineHeight:1.8}}><strong>规划产品 · 尚未上市</strong><p>本页为产品方向与概念图展示。外观、功能、距离、延迟、尺寸及版本配置均待验证和最终确认；图片内的价格与认证字样不构成正式报价、认证证明或实测结论。</p></div>
+    <div style={{padding:"28px 6%",background:"#e0f1fb",color:"#143e5c",lineHeight:1.8}}><strong>未来产品 · 尚未上市</strong><p>本页为产品方向与概念图展示。外观、功能、距离、延迟、尺寸及版本配置均待验证和最终确认；图片内的价格与认证字样不构成正式报价、认证证明或实测结论。</p></div>
     <section id="overview" className={styles.hero}>
       <Artwork x={0} y={0} width={1024} height={368} alt="ZYRO PocketLink TX 与 RX 产品效果图，置于山湖户外拍摄场景中" eager />
       <div className={styles.heroCaption}><span>POCKET & ACTION CAMERA WIRELESS VIDEO</span><h1>ZYRO PocketLink</h1><p>走得更远，让创作自在发生。</p></div>

@@ -12,6 +12,8 @@ type NavGroup = {
 const navGroups: NavGroup[] = [
   { label: "Wiki", href: "/wiki/", items: [
     { label: "文档目录", href: "/wiki/" },
+    { label: "技术科普", href: "/wiki/articles/" },
+    { label: "未来产品", href: "/wiki/future-products/" },
     { label: "实测案例", href: "/wiki/#cases" },
     { label: "开源社区", href: "/wiki/pixelpilot/" },
     { label: "开箱与实测视频", href: "/wiki/videos/" },
@@ -21,7 +23,7 @@ const navGroups: NavGroup[] = [
     href: "/#products",
     items: [
       { label: "全部产品", href: "/#all-products" },
-      { label: "PocketLink · 规划产品", href: "/products/pocket/" },
+      { label: "未来产品", href: "/wiki/future-products/" },
       { label: "数字高清图传", href: "/?category=数字图传#products" },
       { label: "模拟 FPV", href: "/?category=模拟图传#products" },
       { label: "Mesh 与数据链路", href: "/?category=网络通信#products" },
@@ -38,24 +40,7 @@ const navGroups: NavGroup[] = [
       { label: "低延迟 FPV", href: "/#solutions" },
     ],
   },
-  {
-    label: "知识库",
-    href: "/#knowledge",
-    items: [
-      { label: "快速运动与滚动快门", href: "/articles/rolling-shutter" },
-      { label: "FPV OSD 飞行信息", href: "/articles/fpv-osd-basics" },
-      { label: "广角 FOV 与镜头畸变", href: "/articles/fov-and-distortion" },
-      { label: "菲涅尔区与路径净空", href: "/articles/fresnel-zone" },
-      { label: "发射端与天线检查", href: "/articles/vtx-antenna-safety" },
-      { label: "双天线与分集接收", href: "/articles/antenna-diversity" },
-      { label: "模拟图传选频", href: "/articles/analog-frequency-planning" },
-      { label: "分辨率、帧率与码率", href: "/articles/video-bitrate" },
-      { label: "热成像基础", href: "/articles/thermal-imaging" },
-      { label: "图传延迟", href: "/articles/latency" },
-      { label: "Mesh 自组网", href: "/articles/mesh-networking" },
-      { label: "无线链路预算", href: "/articles/link-budget" },
-    ],
-  },
+
   {
     label: "进入 ZYRO",
     href: "/#about",

@@ -122,120 +122,7 @@ const products = [
   },
 ];
 
-const articles = [
-  {
-    tag: "成像基础",
-    date: "本周更新",
-    title: "快速横移时画面为什么会倾斜？读懂滚动快门",
-    excerpt: "从逐行曝光、相对运动到画面倾斜，理解 FPV 动态画面为何会出现时序形变，以及怎样减少影响。",
-    read: "6 分钟阅读",
-    href: "/articles/rolling-shutter",
-  },
-  {
-    tag: "飞行信息",
-    date: "本周更新",
-    title: "FPV 画面上的字到底从哪来？OSD 不是装饰",
-    excerpt: "从电压、电流、飞行模式到返航方向，读懂 FPV OSD 如何把飞控数据叠加到实时画面。",
-    read: "6 分钟阅读",
-    href: "/articles/fpv-osd-basics",
-  },
-  {
-    tag: "成像基础",
-    date: "本周更新",
-    title: "广角看得多，为什么边缘会变形？读懂 FOV 与镜头畸变",
-    excerpt: "从视场角、焦距、传感器到桶形畸变，理解 FPV 相机的广角画面该怎样判断和使用。",
-    read: "6 分钟阅读",
-    href: "/articles/fov-and-distortion",
-  },
-  {
-    tag: "射频基础",
-    date: "本周更新",
-    title: "看得到不等于链路通畅：菲涅尔区为什么需要留空",
-    excerpt: "从直视路径、菲涅尔区到树梢和屋檐造成的绕射，理解图传链路为什么需要空间净空。",
-    read: "6 分钟阅读",
-    href: "/articles/fresnel-zone",
-  },
-  {
-    tag: "模拟图传基础",
-    date: "08.10",
-    title: "图传发射端为什么必须先接天线？别让功率反射回设备",
-    excerpt: "从阻抗匹配、反射功率到现场检查，理解为什么视频发射端不应在未接妥天线时上电发射。",
-    read: "6 分钟阅读",
-    href: "/articles/vtx-antenna-safety",
-  },
-  {
-    tag: "成像基础",
-    date: "07.30",
-    title: "逆光 FPV 为什么看不清？WDR 解决的是什么问题",
-    excerpt: "从高反差场景、曝光取舍到 WDR 的边界，理解 FPV 画面为什么会在明暗交界处失去细节。",
-    read: "6 分钟阅读",
-    href: "/articles/wdr-backlight",
-  },
-  {
-    tag: "射频基础",
-    date: "07.28",
-    title: "双天线图传不是距离翻倍：分集接收到底在解决什么？",
-    excerpt: "从多径衰落、空间分集到安装检查，理解多天线图传如何降低动态环境中的链路波动。",
-    read: "6 分钟阅读",
-    href: "/articles/antenna-diversity",
-  },
-  {
-    tag: "模拟图传基础",
-    date: "07.27",
-    title: "模拟图传怎么选频？先分清频段、频道与干扰间隔",
-    excerpt: "从 5.8 GHz、频道表到同场飞行的频率间隔，建立一套可复现的模拟图传选频方法。",
-    read: "7 分钟阅读",
-    href: "/articles/analog-frequency-planning",
-  },
-  {
-    tag: "射频基础",
-    date: "07.27",
-    title: "图传天线为什么会影响画面？先读懂极化、方向与安装",
-    excerpt: "从线极化、圆极化、方向图到机体遮挡，排查图传链路中最容易被忽略的天线问题。",
-    read: "7 分钟阅读",
-    href: "/articles/antenna-polarization",
-  },
-  {
-    tag: "视频传输基础",
-    date: "07.23",
-    title: "4K、90 fps 与 Mbps：高清视频回传为什么不能只看分辨率？",
-    excerpt: "从像素、帧周期、H.265 压缩到链路余量，拆开视频源参数与无线吞吐之间的关系。",
-    read: "7 分钟阅读",
-    href: "/articles/video-bitrate",
-  },
-  {
-    tag: "热成像基础",
-    date: "07.15",
-    title: "没有可见光，热成像为什么仍能看见？",
-    excerpt: "从 8–14 μm 热辐射到 NETD、红外分辨率和镜头视场，读懂热成像选型中的四个关键概念。",
-    read: "8 分钟阅读",
-    href: "/articles/thermal-imaging",
-  },
-  {
-    tag: "链路科普",
-    date: "07.13",
-    title: "2 ms、35 ms 与一帧画面：图传延迟到底从哪里来？",
-    excerpt: "从无线往返延迟、相机处理到编码与显示，拆解实时视频链路中的每一段时间。",
-    read: "7 分钟阅读",
-    href: "/articles/latency",
-  },
-  {
-    tag: "网络原理",
-    date: "07.06",
-    title: "Mesh 自组网为什么适合无人系统与应急现场？",
-    excerpt: "没有固定主从、节点自动入网、多跳扩大覆盖：用任务场景看懂 Mesh 的价值与边界。",
-    read: "8 分钟阅读",
-    href: "/articles/mesh-networking",
-  },
-  {
-    tag: "射频基础",
-    date: "06.29",
-    title: "发射功率不等于传输距离：链路预算的四个关键变量",
-    excerpt: "频率、天线增益、接收灵敏度与环境共同决定覆盖，功率只是其中一环。",
-    read: "6 分钟阅读",
-    href: "/articles/link-budget",
-  },
-];
+
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("全部产品");
@@ -276,7 +163,7 @@ export default function Home() {
       </section>
 
       <section className="ticker" aria-label="产品系列导航">
-        <a href="#products">数字高清系统</a><a href="#products">模拟 FPV</a><a href="#products">Mesh 自组网</a><a href="#products">热成像模组</a><a href="#knowledge">技术知识中心</a>
+        <a href="#products">数字高清系统</a><a href="#products">模拟 FPV</a><a href="#products">Mesh 自组网</a><a href="#products">热成像模组</a><a href={sitePath("/wiki/articles/")}>技术知识中心</a>
       </section>
 
       <section className="featured-product" id="featured">
@@ -344,26 +231,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="knowledge-section" id="knowledge">
-        <div className="knowledge-intro">
-          <p className="section-index light">ZYRO KNOWLEDGE</p>
-          <h2>读懂无线，<br />再选择设备。</h2>
-          <p>从真实链路问题出发，讲清延迟、频率、功率、Mesh、编码与热成像背后的工程逻辑。</p>
-          <div className="update-chip"><i /> 每周三更新</div>
-        </div>
-        <div className="article-list">
-          {articles.map((article, index) => (
-            <a className="article-card" href={sitePath(article.href)} key={article.title}>
-              <span className="article-no">0{index + 1}</span>
-              <div>
-                <p><b>{article.tag}</b><span>{article.date}</span></p>
-                <h3>{article.title}</h3>
-                <div className="article-footer"><span>{article.excerpt}</span><small>{article.read}　↗</small></div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+      <section className="knowledge-section" id="knowledge"><div className="knowledge-intro"><p className="section-index light">ZYRO WIKI</p><h2>技术科普</h2><p>天线、链路、成像与网络知识，现已统一收录于 Wiki。</p><a href={sitePath("/wiki/articles/")}>进入技术科普 →</a></div></section>
 
       <section className="about-section" id="about">
         <div className="about-quote">“</div>
@@ -377,7 +245,7 @@ export default function Home() {
 
       <section className="support-grid" aria-label="服务与支持">
         <a href="#products"><span>01</span><h3>帮您选型</h3><p>按任务距离、清晰度、延迟和组网方式找到合适产品。</p><b>→</b></a>
-        <a href="#knowledge"><span>02</span><h3>技术知识</h3><p>从基础原理到测试方法，持续更新可复用的工程内容。</p><b>→</b></a>
+        <a href={sitePath("/wiki/articles/")}><span>02</span><h3>技术知识</h3><p>从基础原理到测试方法，持续更新可复用的工程内容。</p><b>→</b></a>
         <a href={sitePath("/downloads/zyro-portfolio.pdf")} target="_blank"><span>03</span><h3>下载中心</h3><p>获取产品总览、用户手册与频段版本资料。</p><b>↓</b></a>
       </section>
 

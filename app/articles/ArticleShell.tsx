@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SiteHeader } from "../SiteHeader";
+import { sitePath } from "../site-path";
 
 type ArticleShellProps = {
   category: string;
@@ -16,6 +17,7 @@ export function ArticleShell({ category, title, deck, date, readingTime, childre
       <SiteHeader />
       <article>
         <header className="article-hero">
+          <a href={sitePath("/wiki/articles/")}>Wiki / 技术科普</a>
           <p className="article-kicker">{category} / ZYRO KNOWLEDGE</p>
           <h1>{title}</h1>
           <p className="article-deck">{deck}</p>

@@ -28,6 +28,7 @@ const { default: worker } = await import(workerUrl.href);
 const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
 const context = { waitUntil() {}, passThroughOnException() {} };
 const routes = [
+  ...["wiki/articles","wiki/future-products","wiki/future-products/ai-tracet","wiki/articles/rolling-shutter","wiki/articles/fpv-osd-basics","wiki/articles/fov-and-distortion","wiki/articles/fresnel-zone","wiki/articles/vtx-antenna-safety","wiki/articles/wdr-backlight","wiki/articles/antenna-diversity","wiki/articles/analog-frequency-planning","wiki/articles/antenna-polarization","wiki/articles/video-bitrate","wiki/articles/thermal-imaging","wiki/articles/latency","wiki/articles/mesh-networking","wiki/articles/link-budget"].map(route => [`${basePath}/${route}/`, `${route}/index.html`]),
   ...["wiki", "wiki/7020-100km", "wiki/7020-277km", "wiki/7030-277km", "wiki/fz7020-40km", "wiki/dayawan-20km", "wiki/mesh-shenzhen-zhongshan", "wiki/pixelpilot", "wiki/videos", "products/pocket"].map(route => [`${basePath}/${route}/`, `${route}/index.html`]),
   [`${basePath}/`, "index.html"],
   [`${basePath}/articles/rolling-shutter/`, "articles/rolling-shutter/index.html"],
@@ -97,17 +98,7 @@ if (basePath === "/wiki") {
 const homepage = await readFile(path.join(siteRoot, "index.html"), "utf8");
 if (
   !homepage.includes(`${basePath}/assets/`) ||
-  !homepage.includes(`${basePath}/articles/rolling-shutter`) ||
-  !homepage.includes(`${basePath}/articles/fpv-osd-basics`) ||
-  !homepage.includes(`${basePath}/articles/fov-and-distortion`) ||
-  !homepage.includes(`${basePath}/articles/fresnel-zone`) ||
-  !homepage.includes(`${basePath}/articles/vtx-antenna-safety`) ||
-  !homepage.includes(`${basePath}/articles/wdr-backlight`) ||
-  !homepage.includes(`${basePath}/articles/antenna-diversity`) ||
-  !homepage.includes(`${basePath}/articles/analog-frequency-planning`) ||
-  !homepage.includes(`${basePath}/articles/antenna-polarization`) ||
-  !homepage.includes(`${basePath}/articles/latency`) ||
-  !homepage.includes(`${basePath}/articles/video-bitrate`)
+  !homepage.includes(`${basePath}/wiki/articles/`)
 ) {
   throw new Error(`Rendered homepage does not contain the expected ${basePath}/ paths.`);
 }
