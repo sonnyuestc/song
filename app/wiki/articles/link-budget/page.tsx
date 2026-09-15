@@ -1,1 +1,3 @@
-export { default, metadata } from "../../../articles/link-budget/page";
+import { EnglishArticlePage, articleMetadata } from "../EnglishArticle";
+export const metadata = articleMetadata("link-budget");
+export default function Page(){return <EnglishArticlePage slug="link-budget"/>;}

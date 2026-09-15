@@ -1,1 +1,3 @@
-export { default, metadata } from "../../../articles/fov-and-distortion/page";
+import { EnglishArticlePage, articleMetadata } from "../EnglishArticle";
+export const metadata = articleMetadata("fov-and-distortion");
+export default function Page(){return <EnglishArticlePage slug="fov-and-distortion"/>;}

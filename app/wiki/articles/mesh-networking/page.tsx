@@ -1,1 +1,3 @@
-export { default, metadata } from "../../../articles/mesh-networking/page";
+import { EnglishArticlePage, articleMetadata } from "../EnglishArticle";
+export const metadata = articleMetadata("mesh-networking");
+export default function Page(){return <EnglishArticlePage slug="mesh-networking"/>;}

@@ -28,6 +28,8 @@ const { default: worker } = await import(workerUrl.href);
 const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
 const context = { waitUntil() {}, passThroughOnException() {} };
 const routes = [
+  [`${basePath}/wiki/future-products/pocketlink/`, "wiki/future-products/pocketlink/index.html"],
+  [`${basePath}/wiki/articles/antenna-gain-beamwidth-en/`, "wiki/articles/antenna-gain-beamwidth-en/index.html"],
   [`${basePath}/wiki/zyro-link-cluster/`, "wiki/zyro-link-cluster/index.html"],
   [`${basePath}/wiki/zyro-link-58ghz/`, "wiki/zyro-link-58ghz/index.html"],
   ...["wiki/articles","wiki/future-products","wiki/future-products/ai-tracet","wiki/articles/rolling-shutter","wiki/articles/fpv-osd-basics","wiki/articles/fov-and-distortion","wiki/articles/fresnel-zone","wiki/articles/vtx-antenna-safety","wiki/articles/wdr-backlight","wiki/articles/antenna-diversity","wiki/articles/analog-frequency-planning","wiki/articles/antenna-polarization","wiki/articles/video-bitrate","wiki/articles/thermal-imaging","wiki/articles/latency","wiki/articles/mesh-networking","wiki/articles/link-budget"].map(route => [`${basePath}/${route}/`, `${route}/index.html`]),

@@ -1,7 +1,7 @@
 [
   {
     "slug": "7020-100km",
-    "title": "7020 系列 100 km 图传拉距测试",
+    "title": "7020 Series 100 km Video Link Field Test",
     "filename": "100公里7020-XX图传拉距测试.pdf",
     "pdf": "/wiki/originals/100公里7020-XX图传拉距测试.pdf",
     "sha256": "7460733e392694e3b7b145901ba2ba8832a01c1e7c9530017e1cc72997b54e1d",
@@ -52,7 +52,7 @@
   },
   {
     "slug": "7020-277km",
-    "title": "7020 20 MHz 277 km 图传拉距测试",
+    "title": "7020 20 MHz, 277 km Video Link Field Test",
     "filename": "277公里7020-20MHz图传拉距测试.pdf",
     "pdf": "/wiki/originals/277公里7020-20MHz图传拉距测试.pdf",
     "sha256": "694cd23146020f9090c76a1f8bd17de045fbe3b4e1e004f66410b64b4c3415f0",
@@ -82,7 +82,7 @@
   },
   {
     "slug": "dayawan-20km",
-    "title": "大亚湾约 20 km 图传测试（英文报告）",
+    "title": "Daya Bay Approximately 20 km Air-to-Ground Video Link Test",
     "filename": "202605_Daya_Bay_20km_Test_Report_with_On-Site_Stream_Video_EN.pdf",
     "pdf": "/wiki/originals/202605_Daya_Bay_20km_Test_Report_with_On-Site_Stream_Video_EN.pdf",
     "sha256": "2939fe54c59dac4555b6f99229c8b05e3d6143b13316ab13fd1322b9536560a5",
@@ -112,7 +112,7 @@
   },
   {
     "slug": "mesh-shenzhen-zhongshan",
-    "title": "深圳—中山跨海 MESH 测试",
+    "title": "Shenzhen–Zhongshan Cross-Sea MESH Test",
     "filename": "20260807MESH深圳对中山测试情况记录.pdf",
     "pdf": "/wiki/originals/20260807MESH深圳对中山测试情况记录.pdf",
     "sha256": "20ccc1eee7c59e87cdc9063fc6a36703161cb22934a1b390aee9cab18ecbeaf6",
@@ -177,7 +177,7 @@
   },
   {
     "slug": "fz7020-40km",
-    "title": "FZ7020-27 40 km 图传测试（英文报告）",
+    "title": "FZ7020-27 40 km Video Link Test",
     "filename": "FZ7020-27_40km_Video_Link_Test_Report_EN.pdf",
     "pdf": "/wiki/originals/FZ7020-27_40km_Video_Link_Test_Report_EN.pdf",
     "sha256": "7ebefc9fff50932861fc00fbde7f110c85f838f6fb705866318b505add6447ff",
@@ -207,7 +207,7 @@
   },
   {
     "slug": "zyro-link-58ghz",
-    "title": "ZYRO Link 5.8 GHz 远距离客户验证报告 V2.0",
+    "title": "ZYRO Link 5.8 GHz Customer Validation Report V2.0",
     "filename": "ZYRO_link_5.8GHz_Long_Range_Customer_Validation_Report_V2.0.pdf",
     "pdf": "/wiki/originals/ZYRO_link_5.8GHz_Long_Range_Customer_Validation_Report_V2.0.pdf",
     "sha256": "856f5ed77a873fbcb313bd631bb03687bfb50beff93b625501f2690bb4aa286b",

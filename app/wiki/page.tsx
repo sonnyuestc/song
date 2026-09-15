@@ -1,7 +1,42 @@
 import { WikiShell } from "./WikiShell";
-import entries from "./content.json";
+import entries from "./content-en.json";
 import reports from "./reports.json";
 import { sitePath } from "../site-path";
 import styles from "./wiki.module.css";
-export const metadata={title:"ZYRO Wiki｜产品资料、实测案例与开源社区"};
-export default function WikiHome(){return <WikiShell><div className={styles.eyebrow}>DOCUMENTATION / 2026.09.15</div><h1>ZYRO 知识与技术文档</h1><p>查找产品资料、现场测试记录与开源资源。先公开可核实的内容，再逐步补充操作指南和视频。</p><h2>产品与资料</h2><div className={styles.grid}><a className={styles.card} href={sitePath("/#products")}><h3>产品中心</h3><p>数字图传、模拟 FPV、Mesh 通信与热成像。</p></a><a className={styles.card} href={sitePath("/downloads/zyro-portfolio.pdf")}><h3>产品资料总览 →</h3><p>查看现有产品与原始 PDF 资料。</p></a></div><h2 id="cases">实测案例</h2><div className={styles.notice}>距离不等于通用覆盖保证。请同时阅读频点、带宽、天线、安装高度与统计口径；缺失或不一致的信息均保留说明。</div><div className={styles.grid}>{entries.filter(e=>e.slug!=="pixelpilot").map(e=><a className={styles.card} key={e.slug} href={sitePath(`/wiki/${e.slug}/`)}><h3>{e.body.split(/\r?\n/)[0].slice(2)}</h3><p>{e.body.split(/\r?\n\r?\n/)[1]}</p><p><strong>{reports.some(r=>r.slug===e.slug) ? `完整 PDF · ${reports.find(r=>r.slug===e.slug)?.pages.length} 页 · 在线阅读全文与图片 →` : "现场测试记录 · 查看图片与测试说明 →"}</strong></p></a>)}</div><h2>开源社区与后续内容</h2><div className={styles.grid}>{[["/wiki/pixelpilot/","PixelPilot / OpenIPC","官方源码、版本下载与适配说明。"],["/wiki/videos/","开箱与实测视频","视频将逐步补充，当前尚无独立播放资源。"],["/wiki/future-products/","未来产品","ZYRO PocketLink 与 ZYRO_AI_TRACET，持续更新产品进展。"],["/wiki/articles/","技术科普","天线、延迟、链路预算与成像基础。"]].map(([u,t,d])=><a key={u} className={styles.card} href={sitePath(u)}><h3>{t}</h3><p>{d}</p></a>)}</div></WikiShell>;}
+
+export const metadata = {
+  title: "ZYRO Wiki | Documentation, Field Tests & Open Source",
+  description: "Product documentation, field-test reports, technical articles and community resources.",
+};
+
+export default function WikiHome() {
+  return <WikiShell>
+    <div className={styles.eyebrow}>DOCUMENTATION / 2026.09.15</div>
+    <h1>ZYRO Documentation & Technical Wiki</h1>
+    <p>Explore product documents, field-test records and open-source resources. Additional guides and videos will be added as verified material becomes available.</p>
+    <h2>Products & documents</h2>
+    <div className={styles.grid}>
+      <a className={styles.card} href={sitePath("/#products")}><h3>Product center</h3><p>Digital video links, analog FPV, Mesh communications and thermal imaging.</p></a>
+      <a className={styles.card} href={sitePath("/downloads/zyro-portfolio.pdf")}><h3>Product portfolio →</h3><p>View the existing products and original PDF documents.</p></a>
+    </div>
+    <h2 id="cases">Field-test case studies</h2>
+    <div className={styles.notice}>A test distance is not a coverage guarantee. Check the recorded frequency, bandwidth, antennas, mounting height and measurement method; source gaps and inconsistencies are explained on each page.</div>
+    <div className={styles.grid}>{entries.filter(e => e.slug !== "pixelpilot").map(e => {
+      const report = reports.find(r => r.slug === e.slug);
+      return <a className={styles.card} key={e.slug} href={sitePath(`/wiki/${e.slug}/`)}>
+        <h3>{e.body.split(/\r?\n/)[0].slice(2)}</h3>
+        <p>{e.body.split(/\r?\n\r?\n/)[1]}</p>
+        <p><strong>{report ? `Original PDF · ${report.pages.length} pages · View all pages →` : "Field photo & test record →"}</strong></p>
+      </a>;
+    })}</div>
+    <h2>Community & upcoming content</h2>
+    <div className={styles.grid}>{[
+      ["/wiki/pixelpilot/", "PixelPilot / OpenIPC", "Upstream source code, releases and compatibility notes."],
+      ["/wiki/videos/", "Unboxing & test videos", "Video material will be added progressively."],
+      ["/wiki/future-products/", "Future products", "ZYRO PocketLink and ZYRO_AI_TRACET concept information."],
+      ["/wiki/articles/", "Technical articles", "Antennas, latency, link budgets and imaging fundamentals."],
+    ].map(([url, title, detail]) => <a className={styles.card} key={url} href={sitePath(url)}>
+      <h3>{title}</h3><p>{detail}</p>
+    </a>)}</div>
+  </WikiShell>;
+}

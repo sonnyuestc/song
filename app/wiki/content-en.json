@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "zyro-link-cluster",
+    "body": "# ZYRO Link Point-to-Multipoint Cluster Test\n\nThe supplied field record reports that ZYRO Link controlled 10 aircraft in point-to-multipoint cluster mode over a control distance of 5 km. The photo below shows the test scene.\n\n## Test overview\n\n| Item | Reported value |\n| --- | --- |\n| Product | ZYRO Link |\n| Mode | Point-to-multipoint cluster |\n| Aircraft controlled | 10 |\n| Control distance | 5 km |\n\n## Field photo\n\n![Aircraft flying above an open field in the ZYRO Link cluster test](../assets/zyro-link-cluster-10-aircraft.png)\n\n## Record notes\n\nThe test team supplied the mode, aircraft count and distance. The photo illustrates the scene; it does not independently establish a measured range. The 5 km figure is a control-distance record, not a video-range result or a coverage guarantee in other conditions.\n\nThe date, hardware and firmware revisions, frequency, antenna setup, flight altitude and duration may be added when their records are available."
+  },
+  {
+    "slug": "7020-100km",
+    "body": "# 7020 Series 100 km Video Link Field Test\n\nThe report dated 27 October 2025 covers a 100 km test of the 7020-30-1400 and 7020-40-1400 modules. It includes test locations, spectrum captures and throughput measurements. All six pages of the supplied PDF are displayed below.\n\nModule range descriptions in the report are separate from field measurements. The observed results apply to the recorded frequency, transmit power and antenna combinations."
+  },
+  {
+    "slug": "7020-277km",
+    "body": "# 7020 20 MHz, 277 km Video Link Field Test\n\nThe 14 December 2023 test ran between Wugu Jian and Jiuling Jian. Although the source report is titled a “300 km” test, it records an actual separation of 277 km. Its three pages show the sites, setup, spectrum and bidirectional traffic results.\n\nThe report gives 11.8 Mbps in each direction. These readings must not be added as a measured simultaneous bidirectional rate. The module description's 500 km figure was not tested here."
+  },
+  {
+    "slug": "dayawan-20km",
+    "body": "# Daya Bay Approximately 20 km Air-to-Ground Video Link Test\n\nThe supplied English PDF records an air-to-ground test at Daya Bay on 14 May 2026. Its target was 20 km and the measured separation between locations was 19.6 km. It records an aircraft altitude of 80 m and a ground tripod height of 1.8 m. All three pages are shown below.\n\nThis PDF is the current source version. It includes video frames and a video filename, but no separately verified, playable video has yet been supplied to this site."
+  },
+  {
+    "slug": "mesh-shenzhen-zhongshan",
+    "body": "# Shenzhen–Zhongshan Cross-Sea MESH Test\n\nThe 7 August 2026 air-to-ground cross-sea report covers omnidirectional and directional antennas, a three-node single-hop setup and a two-hop setup. All eight pages of field photos, link screenshots and test notes are displayed below.\n\nThe report lists a 30 km target, a 28.6 km map measurement and an approximately 28.3 km link display. Its antenna list says 4 dBi while a later passage says 5 dBi; both source readings are retained pending clarification. Referenced video files can be added when supplied."
+  },
+  {
+    "slug": "fz7020-40km",
+    "body": "# FZ7020-27 40 km Video Link Test\n\nThe English PDF records a test between Wangwei Mountain and Majiawu on 23 December 2025. It includes environmental spectrum, test setup and bidirectional results at 20 MHz and 10 MHz bandwidth. All three pages are shown below.\n\nThe title describes two 0.5 W devices, whereas the setup and result tables record 800 mW / 29 dBm. The difference remains in the source report and is not treated as a single confirmed power setting."
+  },
+  {
+    "slug": "zyro-link-58ghz",
+    "body": "# ZYRO Link 5.8 GHz Long-Range Customer Validation Report V2.0\n\nThe customer field-validation document dated 21 July 2026 covers 3.86 km and 9.78 km routes. It includes equipment setup, directional versus omnidirectional antenna comparisons, operating screenshots, a result matrix and an appendix. All 18 pages are displayed below.\n\nAt 9.78 km, the report describes smooth video with a directional antenna at 512 and 1024 kbps. With an omnidirectional antenna it describes smooth video at 512 kbps and slight stutter at 1024 kbps. These are observations from that site and configuration, not a general performance guarantee.\n\nThe report labels the band 5.8 GHz and also records a UI value of 36. Channel mapping and actual center frequency still need confirmation from equipment documentation. Separate test videos were not included with this PDF."
+  },
+  {
+    "slug": "pixelpilot",
+    "body": "# PixelPilot Open-Source Receiver and Display Software\n\nPixelPilot is an OpenIPC community Android application for receiving and decoding H.264/H.265 video streams carried by wfb-ng. The Wiki links to its upstream source code, releases and issue tracker as receiver resources.\n\n## Official resources\n\n- [Source code and usage notes](https://github.com/OpenIPC/PixelPilot)\n- [Releases and APK downloads](https://github.com/OpenIPC/PixelPilot/releases)\n- [Issue tracker](https://github.com/OpenIPC/PixelPilot/issues)\n- [License](https://github.com/OpenIPC/PixelPilot/blob/master/LICENSE)\n\nChecked on 12 September 2026: the Releases page then marked v0.25.0 “Latest.” Check upstream for the current release before installing; that dated observation is not a permanent version recommendation.\n\n## Check compatibility before use\n\nConfirm the Android device, USB receiver adapter, software release and transmitter protocol. The upstream README mentions rtl8812au/rtl8812eu adapters, DVR and configurable keys; support depends on the version and hardware.\n\nNo verified ZYRO model compatibility list is available yet. H.264/H.265 output alone does not establish that PixelPilot can receive a model's radio protocol. The 1.4 GHz MESH reports do not establish PixelPilot compatibility.\n\n## Planned Wiki updates\n\nValidated receiver, Android, USB-adapter and transmitter combinations will be added individually, with resolution, frame rate, recording and audio observations, known issues and test dates. Unboxing and installation videos can then be linked to specific combinations.\n\nPixelPilot belongs to OpenIPC. The upstream repository identifies its license as GPL-3.0; this Wiki links to upstream packages rather than mirroring APK files."
+  }
+]

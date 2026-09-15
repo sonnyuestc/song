@@ -1,1 +1,3 @@
-export { default, metadata } from "../../../articles/latency/page";
+import { EnglishArticlePage, articleMetadata } from "../EnglishArticle";
+export const metadata = articleMetadata("latency");
+export default function Page(){return <EnglishArticlePage slug="latency"/>;}
