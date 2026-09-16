@@ -32,7 +32,7 @@ export default function WikiHome() {
     <h2>Community & upcoming content</h2>
     <div className={styles.grid}>{[
       ["/wiki/pixelpilot/", "PixelPilot / OpenIPC", "Upstream source code, releases and compatibility notes."],
-      ["/wiki/videos/", "Unboxing & test videos", "Watch ZYRO_link; more videos will be added by product and test scenario."],
+      ["/wiki/videos/", "Unboxing & test videos", "Watch ZYRO_link and ZYRO_air openipc; more videos will be added."],
       ["/wiki/future-products/", "Future products", "ZYRO PocketLink and ZYRO_AI_TRACET concept information."],
       ["/wiki/articles/", "Technical articles", "Antennas, latency, link budgets and imaging fundamentals."],
     ].map(([url, title, detail]) => <a className={styles.card} key={url} href={sitePath(url)}>
