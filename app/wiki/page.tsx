@@ -14,11 +14,6 @@ export default function WikiHome() {
     <div className={styles.eyebrow}>DOCUMENTATION / 2026.09.15</div>
     <h1>ZYRO Documentation & Technical Wiki</h1>
     <p>Explore product documents, field-test records and open-source resources. Additional guides and videos will be added as verified material becomes available.</p>
-    <h2>Products & documents</h2>
-    <div className={styles.grid}>
-      <a className={styles.card} href={sitePath("/#products")}><h3>Product center</h3><p>Digital video links, analog FPV, Mesh communications and thermal imaging.</p></a>
-      <a className={styles.card} href={sitePath("/downloads/zyro-portfolio.pdf")}><h3>Product portfolio →</h3><p>View the existing products and original PDF documents.</p></a>
-    </div>
     <h2 id="cases">Field-test case studies</h2>
     <div className={styles.notice}>A test distance is not a coverage guarantee. Check the recorded frequency, bandwidth, antennas, mounting height and measurement method; source gaps and inconsistencies are explained on each page.</div>
     <div className={styles.grid}>{entries.filter(e => e.slug !== "pixelpilot").map(e => {
